@@ -1,0 +1,18 @@
+<p>Welcome to the escape room template.</p>
+<p>Please enter the password to get started.</p>
+
+<app-answer
+    [correctAnswer]="correctAnswer"
+    [errorMessage]="errorMessage"
+    (successfulValidation)="handleValidationResponse()">
+</app-answer>
+
+<!-- <form (submit)="onSubmit()">
+    <label for="password">Password: </label>
+    <input id="password" type="text" [formControl]="password">
+    <button (onClick)="onSubmit()">Submit</button>
+</form>
+
+<div *ngIf="displayError">
+    That password was not correct. Please try again.
+</div> -->

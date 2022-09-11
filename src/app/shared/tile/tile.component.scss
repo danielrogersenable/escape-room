@@ -1,0 +1,32 @@
+.tile {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    display: content;
+    width: 256px;
+    padding: 8px;
+}
+
+.tile-header {
+    position: relative;
+
+    h2 {
+        max-width: calc(100% - 48px);
+    }
+}
+
+.tile-status {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    position: absolute;
+    right: 4px;
+    top: -28px;
+
+    &.success {
+        background-color: green;
+    }
+}

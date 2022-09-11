@@ -1,0 +1,11 @@
+<form (submit)="onSubmit()">
+    <label for="answer">Answer: </label>
+    <input id="answer" type="text" [formControl]="answer">
+    <button (onClick)="onSubmit()">Submit</button>
+</form>
+
+<div *ngIf="displayError">
+    {{ errorMessage }}
+</div>
+
+<button (click)="returnToMenu()">Return to menu</button>
