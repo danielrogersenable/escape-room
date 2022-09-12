@@ -4,12 +4,24 @@
 
 <div class="tile-grid">
     <div class="tile-selectable" (click)="selectPuzzle1()">
-        <app-tile [title]="'Puzzle 1'" [description]="'Puzzle 1 description goes here'" [complete]="answerStatus.puzzle1"></app-tile>
+        <app-tile
+            [title]="'Puzzle 1'"
+            [description]="'Puzzle 1 description goes here'"
+            [complete]="answerStatus.puzzle1">
+        </app-tile>
     </div>
     <div class="tile-selectable" (click)="selectPuzzle2()">
-        <app-tile [title]="'Puzzle 2'" [description]="'Puzzle 2 description goes here'" [complete]="answerStatus.puzzle2"></app-tile>
+        <app-tile
+            [title]="'Puzzle 2'"
+            [description]="'Puzzle 2 description goes here'" 
+            [complete]="answerStatus.puzzle2">
+        </app-tile>
     </div>
     <div class="tile-selectable" (click)="selectPuzzle3()">
-        <app-tile [title]="'Puzzle 3'" [description]="'Puzzle 3 description goes here'" [complete]="answerStatus.puzzle3"></app-tile>    
+        <app-tile
+            [title]="'Puzzle 3'"
+            [description]="'Puzzle 3 description goes here'"
+            [complete]="answerStatus.puzzle3">
+        </app-tile>    
     </div>
 </div>

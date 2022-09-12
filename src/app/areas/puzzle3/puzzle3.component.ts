@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -13,6 +13,9 @@ export class Puzzle3Component implements OnInit {
   ngOnInit(): void {
   }
 
+  @Input()
+  public isComplete = false;
+  
   @Output()
   correctAnswerProvided = new EventEmitter();
 

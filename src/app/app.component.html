@@ -10,13 +10,22 @@
     </div>
     <div class="main-body">
       <div *ngIf="puzzle1Visible">
-        <app-puzzle1 (correctAnswerProvided)="handlePuzzle1Result()" (close)="showContents()"></app-puzzle1>
+        <app-puzzle1
+          [isComplete]="answerStatus.puzzle1"
+          (correctAnswerProvided)="handlePuzzle1Result()"
+          (close)="showContents()"></app-puzzle1>
       </div>
       <div *ngIf="puzzle2Visible">
-        <app-puzzle2 (correctAnswerProvided)="handlePuzzle2Result()" (close)="showContents()"></app-puzzle2>
+        <app-puzzle2
+          [isComplete]="answerStatus.puzzle2"        
+          (correctAnswerProvided)="handlePuzzle2Result()"
+          (close)="showContents()"></app-puzzle2>
       </div>
       <div *ngIf="puzzle3Visible">
-        <app-puzzle3 (correctAnswerProvided)="handlePuzzle3Result()"  (close)="showContents()"></app-puzzle3>
+        <app-puzzle3
+          [isComplete]="answerStatus.puzzle3"        
+          (correctAnswerProvided)="handlePuzzle3Result()"
+          (close)="showContents()"></app-puzzle3>
       </div>
       <div *ngIf="isComplete">
         <app-complete></app-complete>

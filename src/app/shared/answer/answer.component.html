@@ -1,14 +1,25 @@
-<form (submit)="onSubmit()">
-    <div class="input-container">
-        <label for="answer">Answer: </label>
-        <input id="answer" type="text" [formControl]="answer">    
+<ng-container *ngIf="isComplete;then completeMessage else incompleteMessage"></ng-container>
+<ng-template #completeMessage>
+    <div class="messages-container">
+        Nice work, you've already completed this one! The answer in this case was: '{{ correctAnswer }}'.
     </div>
-    <button (onClick)="onSubmit()">Submit</button>
-</form>
+    <p></p>
+</ng-template>
+<ng-template #incompleteMessage>
+    <form (submit)="onSubmit()">
+        <div class="input-container">
+            <label for="answer">Answer: </label>
+            <input id="answer" type="text" [formControl]="answer">    
+        </div>
+        <button (onClick)="onSubmit()">Submit</button>
+    </form>
+    
+    <div class="messages-container" *ngIf="displayError">
+        {{ errorMessage }}
+    </div>
+</ng-template>
 
-<div class="errors-container" *ngIf="displayError">
-    {{ errorMessage }}
-</div>
+
 
 <div class="buttons-container">
     <button (click)="returnToMenu()">Return to menu</button>

@@ -20,6 +20,9 @@ export class AnswerComponent implements OnInit {
   @Input()
   public errorMessage: string = 'That answer was not correct. Please try again.'
 
+  @Input()
+  public isComplete = false;
+
   @Output()
   public successfulValidation = new EventEmitter();
 
