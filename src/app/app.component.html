@@ -1,24 +1,26 @@
-<div *ngIf="!isValidated">
-  <app-sign-in (successfulValidation)="successfulValidation()"></app-sign-in>
-</div>
-<div *ngIf="isValidated">
-  <div class="menu-bar">
-    <div *ngIf="contentsVisible">
-      <app-contents [answerStatus]="answerStatus" (selectedPuzzle)="handleSelectedPuzzle($event)"></app-contents>
-    </div>  
+<div class="body-container">
+  <div *ngIf="!isValidated">
+    <app-sign-in (successfulValidation)="successfulValidation()"></app-sign-in>
   </div>
-  <div class="main-body">
-    <div *ngIf="puzzle1Visible">
-      <app-puzzle1 (correctAnswerProvided)="handlePuzzle1Result()" (close)="showContents()"></app-puzzle1>
+  <div *ngIf="isValidated">
+    <div class="menu-bar">
+      <div *ngIf="contentsVisible">
+        <app-contents [answerStatus]="answerStatus" (selectedPuzzle)="handleSelectedPuzzle($event)"></app-contents>
+      </div>  
     </div>
-    <div *ngIf="puzzle2Visible">
-      <app-puzzle2 (correctAnswerProvided)="handlePuzzle2Result()" (close)="showContents()"></app-puzzle2>
-    </div>
-    <div *ngIf="puzzle3Visible">
-      <app-puzzle3 (correctAnswerProvided)="handlePuzzle3Result()"  (close)="showContents()"></app-puzzle3>
-    </div>
-    <div *ngIf="isComplete">
-      <app-complete></app-complete>
+    <div class="main-body">
+      <div *ngIf="puzzle1Visible">
+        <app-puzzle1 (correctAnswerProvided)="handlePuzzle1Result()" (close)="showContents()"></app-puzzle1>
+      </div>
+      <div *ngIf="puzzle2Visible">
+        <app-puzzle2 (correctAnswerProvided)="handlePuzzle2Result()" (close)="showContents()"></app-puzzle2>
+      </div>
+      <div *ngIf="puzzle3Visible">
+        <app-puzzle3 (correctAnswerProvided)="handlePuzzle3Result()"  (close)="showContents()"></app-puzzle3>
+      </div>
+      <div *ngIf="isComplete">
+        <app-complete></app-complete>
+      </div>
     </div>
   </div>
 </div>

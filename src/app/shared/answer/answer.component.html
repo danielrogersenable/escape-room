@@ -1,11 +1,15 @@
 <form (submit)="onSubmit()">
-    <label for="answer">Answer: </label>
-    <input id="answer" type="text" [formControl]="answer">
+    <div class="input-container">
+        <label for="answer">Answer: </label>
+        <input id="answer" type="text" [formControl]="answer">    
+    </div>
     <button (onClick)="onSubmit()">Submit</button>
 </form>
 
-<div *ngIf="displayError">
+<div class="errors-container" *ngIf="displayError">
     {{ errorMessage }}
 </div>
 
-<button (click)="returnToMenu()">Return to menu</button>
+<div class="buttons-container">
+    <button (click)="returnToMenu()">Return to menu</button>
+</div>

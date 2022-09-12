@@ -35,9 +35,9 @@ export class AnswerComponent implements OnInit {
   public displayError = false;
 
   public onSubmit(): void {
-    const submittedValue = this.answer.value;
+    const submittedValue = String(this.answer.value).toLowerCase();
 
-    const successfulValidation = submittedValue === this.correctAnswer;
+    const successfulValidation = submittedValue === this.correctAnswer.toLowerCase();
 
     if (successfulValidation) {
       this.displayError = false;

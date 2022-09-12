@@ -1,6 +1,6 @@
 .tile {
-    background-color: #444;
-    color: #fff;
+    background-color: #5661A9;
+    color: #E9eef1;
     border-radius: 5px;
     padding: 20px;
     font-size: 150%;
@@ -13,8 +13,13 @@
     position: relative;
 
     h2 {
+        font-size: 38px;
         max-width: calc(100% - 48px);
     }
+}
+
+.tile-description {
+    font-size: 17px;
 }
 
 .tile-status {
@@ -25,6 +30,7 @@
     position: absolute;
     right: 4px;
     top: -28px;
+    border-radius: 16px;
 
     &.success {
         background-color: green;
