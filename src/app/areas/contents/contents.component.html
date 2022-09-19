@@ -7,21 +7,21 @@
         <app-tile
             [title]="'Puzzle 1'"
             [description]="'Puzzle 1 description goes here'"
-            [complete]="answerStatus.puzzle1">
+            [complete]="answerStatus.getIsPuzzle1Complete">
         </app-tile>
     </div>
     <div *ngIf="permissionsStatus.getIsPuzzle2Permitted" class="tile-selectable" (click)="selectPuzzle2()">
         <app-tile
             [title]="'Puzzle 2'"
             [description]="'Puzzle 2 description goes here'" 
-            [complete]="answerStatus.puzzle2">
+            [complete]="answerStatus.getIsPuzzle2Complete">
         </app-tile>
     </div>
     <div *ngIf="permissionsStatus.getIsPuzzle3Permitted" class="tile-selectable" (click)="selectPuzzle3()">
         <app-tile
             [title]="'Puzzle 3'"
             [description]="'Puzzle 3 description goes here'"
-            [complete]="answerStatus.puzzle3">
+            [complete]="answerStatus.getIsPuzzle3Complete">
         </app-tile>    
     </div>
 </div>

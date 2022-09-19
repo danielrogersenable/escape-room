@@ -47,7 +47,6 @@ export class MenuComponent implements OnInit {
   }
 
   public handleSignOut() {
-    console.log('signing out');
     this.requestSignOut.emit();
   }
 }

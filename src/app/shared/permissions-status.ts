@@ -53,7 +53,6 @@ export class PermissionsStatus {
     }
 
     public setPuzzle2Complete() {
-        console.log('permitting puzzle 3');
         this.permitPuzzle3();
     }
 

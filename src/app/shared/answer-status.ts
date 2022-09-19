@@ -1,17 +1,39 @@
 export class AnswerStatus {
-    public puzzle1: boolean = false;
-    public puzzle2: boolean = false;
-    public puzzle3: boolean = false;    
+    private isPuzzle1Complete: boolean = false;
+    private isPuzzle2Complete: boolean = false;
+    private isPuzzle3Complete: boolean = false;    
+
+    public get getIsPuzzle1Complete(): boolean {
+        return this.isPuzzle1Complete;
+    }
 
     public setPuzzle1Complete() {
-        this.puzzle1 = true;
+        this.isPuzzle1Complete = true;
+    }
+
+    public get getIsPuzzle2Complete(): boolean {
+        return this.isPuzzle2Complete;
     }
 
     public setPuzzle2Complete() {
-        this.puzzle2 = true;
+        this.isPuzzle2Complete = true;
+    }
+
+    public get getIsPuzzle3Complete(): boolean {
+        return this.isPuzzle3Complete;
     }
 
     public setPuzzle3Complete() {
-        this.puzzle3 = true;
+        this.isPuzzle3Complete = true;
+    }
+
+    public get getIsComplete() {
+        return this.isPuzzle1Complete && this.isPuzzle2Complete && this.isPuzzle3Complete;
+    }
+
+    public resetAllAnswers() {
+        this.isPuzzle1Complete = false;
+        this.isPuzzle2Complete = false;
+        this.isPuzzle3Complete = false;
     }
 }

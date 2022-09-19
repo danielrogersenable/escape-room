@@ -63,7 +63,6 @@ export class AppComponent {
   }
 
   public handlePuzzle2Result() {
-    console.log('handling puzzle 2 result');
     this.answerStatus.setPuzzle2Complete();
     this.permissionsStatus.setPuzzle2Complete();
     this.visibilityStatus.showContents();
@@ -80,10 +79,13 @@ export class AppComponent {
   }
 
   public get isComplete(): boolean {
-    return this.isValidated && this.answerStatus.puzzle1 && this.answerStatus.puzzle2 && this.answerStatus.puzzle3;
+    return this.answerStatus.getIsComplete;
   }
 
   public handleRequestSignOut() {
+    this.answerStatus.resetAllAnswers();
+    this.permissionsStatus.revokePermissions();
+    this.visibilityStatus.deselectEverything();
     this.isValidated = false;
   }
 }
