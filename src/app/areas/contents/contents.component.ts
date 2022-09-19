@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AnswerStatus } from 'src/app/shared/answer-status';
 import { PageOptions } from 'src/app/shared/page-options';
+import { PermissionsStatus } from 'src/app/shared/permissions-status';
 
 @Component({
   selector: 'app-contents',
@@ -16,6 +17,9 @@ export class ContentsComponent implements OnInit {
 
   @Input()
   public answerStatus = new AnswerStatus();
+
+  @Input()
+  public permissionsStatus = new PermissionsStatus();
 
   @Output()
   public selectedPuzzle = new EventEmitter<PageOptions>();

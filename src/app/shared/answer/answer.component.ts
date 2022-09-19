@@ -23,6 +23,9 @@ export class AnswerComponent implements OnInit {
   @Input()
   public isComplete = false;
 
+  @Input()
+  public displayReturnToMenu = true;
+
   @Output()
   public successfulValidation = new EventEmitter();
 

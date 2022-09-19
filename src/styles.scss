@@ -1,16 +1,18 @@
+@import './_variables.scss';
+
 /* You can add global styles to this file, and also import other style files */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #17445e;
+    color: $color-text;
     font-size: 14px;
 }
 
 button {
-  background-color: #5661A9;
+  background-color: $color-button-background;
   border-radius: 8px;
-  border: 1px solid #5661A9;
+  border: 1px solid $color-button-background;
   box-sizing: border-box;
-  color: #E9eef1;
+  color: $color-button-text;
   cursor: pointer;
   display: inline-block;
   height: 32px;
@@ -27,9 +29,8 @@ button {
   touch-action: manipulation;
 }
 
-button:hover,
-button:focus {
-  background-color: #E9eef1;
-  color: #5661A9;
-  border-color: #5661A9;
+button:hover {
+  background-color: $color-button-text;
+  color: $color-button-background;
+  border-color: $color-button-background;
 }

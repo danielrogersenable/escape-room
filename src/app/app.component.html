@@ -1,27 +1,36 @@
+<div class="menu-container">
+  <app-menu
+    [permissionsStatus]="permissionsStatus"
+    [visibilityStatus]="visibilityStatus"
+    (requestSignOut)="handleRequestSignOut()"></app-menu>
+</div>
 <div class="body-container">
   <div *ngIf="!isValidated">
-    <app-sign-in (successfulValidation)="successfulValidation()"></app-sign-in>
+    <app-sign-in (correctAnswerProvided)="successfulValidation()"></app-sign-in>
   </div>
   <div *ngIf="isValidated">
     <div class="menu-bar">
-      <div *ngIf="contentsVisible">
-        <app-contents [answerStatus]="answerStatus" (selectedPuzzle)="handleSelectedPuzzle($event)"></app-contents>
+      <div *ngIf="visibilityStatus.getIsContentsVisible">
+        <app-contents
+          [answerStatus]="answerStatus"
+          [permissionsStatus]="permissionsStatus"
+          (selectedPuzzle)="handleSelectedPuzzle($event)"></app-contents>
       </div>  
     </div>
     <div class="main-body">
-      <div *ngIf="puzzle1Visible">
+      <div *ngIf="permissionsStatus.getIsPuzzle1Permitted && visibilityStatus.getIsPuzzle1Visible">
         <app-puzzle1
           [isComplete]="answerStatus.puzzle1"
           (correctAnswerProvided)="handlePuzzle1Result()"
           (close)="showContents()"></app-puzzle1>
       </div>
-      <div *ngIf="puzzle2Visible">
+      <div *ngIf="permissionsStatus.getIsPuzzle2Permitted && visibilityStatus.getIsPuzzle2Visible">
         <app-puzzle2
           [isComplete]="answerStatus.puzzle2"        
           (correctAnswerProvided)="handlePuzzle2Result()"
           (close)="showContents()"></app-puzzle2>
       </div>
-      <div *ngIf="puzzle3Visible">
+      <div *ngIf="permissionsStatus.getIsPuzzle3Permitted && visibilityStatus.getIsPuzzle3Visible">
         <app-puzzle3
           [isComplete]="answerStatus.puzzle3"        
           (correctAnswerProvided)="handlePuzzle3Result()"

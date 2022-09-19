@@ -24,6 +24,7 @@ export class SignInComponent implements OnInit {
   public errorMessage = 'That password was not correct. Please try again.';
 
   public handleValidationResponse(): void {
+    console.log('handling');
     this.correctAnswerProvided.emit();
   }
 }

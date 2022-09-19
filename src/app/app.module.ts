@@ -12,6 +12,7 @@ import { CompleteComponent } from './areas/complete/complete.component';
 import { AnswerComponent } from './shared/answer/answer.component';
 import { ContentsComponent } from './areas/contents/contents.component';
 import { TileComponent } from './shared/tile/tile.component';
+import { MenuComponent } from './areas/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TileComponent } from './shared/tile/tile.component';
     CompleteComponent,
     AnswerComponent,
     ContentsComponent,
-    TileComponent
+    TileComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
