@@ -1,21 +1,23 @@
+import { Injectable, OnInit } from "@angular/core";
 import { PermissionsStatusData } from "./permissions-status-data";
+import { StorageService } from "./storage.service";
 
-export class PermissionsStatus {
-    private permissionsStatusData: PermissionsStatusData = null;
+@Injectable({
+    providedIn: 'root'
+  })
+export class PermissionsStatus implements OnInit {
+    private permissionsStatusData: PermissionsStatusData = new PermissionsStatusData();
 
-    constructor(permissionsStatusData: PermissionsStatusData = null) {
+    constructor(private readonly _storageService: StorageService) {
+        const permissionsStatusData = this._storageService.getPermissionsStateFromLocalStorage();
         if (permissionsStatusData) {
             this.permissionsStatusData = permissionsStatusData;
         } else {
-            this.permissionsStatusData = {
-                isSignInPermitted: true,
-                isSignOutPermitted: false,
-                isContentsPermitted: false,
-                isPuzzle1Permitted: false,
-                isPuzzle2Permitted: false,
-                isPuzzle3Permitted: false
-            };
+            this.revokePermissions();
         }
+    }
+
+    public ngOnInit(): void {
     }
 
     public get getPermissionsStatusData(): PermissionsStatusData {
@@ -23,13 +25,15 @@ export class PermissionsStatus {
     }
 
     public revokePermissions() {
-        this.permissionsStatusData.isSignInPermitted = true;
-        this.permissionsStatusData.isSignOutPermitted = false;
-
-        this.permissionsStatusData.isContentsPermitted = false;
-        this.permissionsStatusData.isPuzzle1Permitted = false;
-        this.permissionsStatusData.isPuzzle2Permitted = false;
-        this.permissionsStatusData.isPuzzle3Permitted = false;
+        this.permissionsStatusData = {
+            isSignInPermitted: true,
+            isSignOutPermitted: false,
+            isContentsPermitted: false,
+            isPuzzle1Permitted: false,
+            isPuzzle2Permitted: false,
+            isPuzzle3Permitted: false
+        };
+        this.storePermissionsStatusData();
     }
 
     public completeValidation() {
@@ -76,17 +80,25 @@ export class PermissionsStatus {
 
     private permitContents() {
         this.permissionsStatusData.isContentsPermitted = true;
+        this.storePermissionsStatusData();
     }
 
     private permitPuzzle1() {
         this.permissionsStatusData.isPuzzle1Permitted = true;
+        this.storePermissionsStatusData();
     }
 
     private permitPuzzle2() {
         this.permissionsStatusData.isPuzzle2Permitted = true;
+        this.storePermissionsStatusData();
     }
 
     private permitPuzzle3() {
         this.permissionsStatusData.isPuzzle3Permitted = true;
+        this.storePermissionsStatusData();
+    }
+
+    private storePermissionsStatusData() {
+        this._storageService.setPermissionsStateInLocalStorage(this.permissionsStatusData);
     }
 }

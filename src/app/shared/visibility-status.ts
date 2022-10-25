@@ -1,19 +1,25 @@
+import { Injectable, OnInit } from "@angular/core";
+import { StorageService } from "./storage.service";
 import { VisibilityStatusData } from "./visibility-status-data";
 
-export class VisibilityStatus {
-    private visibilityStatusData: VisibilityStatusData = null;
-    
-    constructor(visibilityStatusData: VisibilityStatusData = null) {
+@Injectable({
+    providedIn: 'root'
+  })
+export class VisibilityStatus implements OnInit {
+    private visibilityStatusData: VisibilityStatusData = new VisibilityStatusData();
+   
+    // I don't love doing this work in the constructor. But if we do it on init we get issues with incorrect logic elsewhere.
+    constructor(private readonly _storageService: StorageService) {
+        const visibilityStatusData = this._storageService.getVisibilityStateFromLocalStorage();
         if (visibilityStatusData) {
             this.visibilityStatusData = visibilityStatusData;
         } else {
-            this.visibilityStatusData = {
-                isContentsVisible: false,
-                isPuzzle1Visible: false,
-                isPuzzle2Visible: false,
-                isPuzzle3Visible: false
-            };
+            this.deselectEverything();
+            this.storeVisibilityStatusData();
         }
+    }
+
+    public ngOnInit(): void {
     }
 
     public get getVisibilityStatusData(): VisibilityStatusData {
@@ -21,10 +27,13 @@ export class VisibilityStatus {
     }
 
     public deselectEverything() {
-        this.visibilityStatusData.isContentsVisible = false;
-        this.visibilityStatusData.isPuzzle1Visible = false;
-        this.visibilityStatusData.isPuzzle2Visible = false;
-        this.visibilityStatusData.isPuzzle3Visible = false;
+        this.visibilityStatusData = {
+            isContentsVisible: false,
+            isPuzzle1Visible: false,
+            isPuzzle2Visible: false,
+            isPuzzle3Visible: false
+        };
+        this.storeVisibilityStatusData();
     }
 
     public get getIsContentsVisible(): boolean {
@@ -34,6 +43,7 @@ export class VisibilityStatus {
     public showContents() {
         this.deselectEverything();
         this.visibilityStatusData.isContentsVisible = true;
+        this.storeVisibilityStatusData();
     }
 
     public get getIsPuzzle1Visible(): boolean {
@@ -43,6 +53,7 @@ export class VisibilityStatus {
     public showPuzzle1() {
         this.deselectEverything();
         this.visibilityStatusData.isPuzzle1Visible = true;
+        this.storeVisibilityStatusData();
     }
 
     public get getIsPuzzle2Visible(): boolean {
@@ -52,6 +63,7 @@ export class VisibilityStatus {
     public showPuzzle2() {
         this.deselectEverything();
         this.visibilityStatusData.isPuzzle2Visible = true;
+        this.storeVisibilityStatusData();
     }
 
     public get getIsPuzzle3Visible(): boolean {
@@ -61,5 +73,10 @@ export class VisibilityStatus {
     public showPuzzle3() {
         this.deselectEverything();
         this.visibilityStatusData.isPuzzle3Visible = true;
+        this.storeVisibilityStatusData();
+    }
+
+    private storeVisibilityStatusData() {
+        this._storageService.setVisibilityStateInLocalStorage(this.visibilityStatusData);
     }
 }

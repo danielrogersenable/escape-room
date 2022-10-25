@@ -1,9 +1,15 @@
+import { Injectable, OnInit } from "@angular/core";
 import { AnswerStatusData } from "./answer-status-data";
+import { StorageService } from "./storage.service";
 
-export class AnswerStatus {
-    private answerStatusData: AnswerStatusData = null;
+@Injectable({
+    providedIn: 'root'
+  })
+export class AnswerStatus implements OnInit {
+    private answerStatusData: AnswerStatusData = new AnswerStatusData();
 
-    constructor(data: AnswerStatusData = null) {
+    constructor(private readonly _storageService: StorageService) {
+        const data = this._storageService.getAnswerStateFromLocalStorage();
         if (data) {
             this.answerStatusData = data;
         } else {
@@ -11,8 +17,7 @@ export class AnswerStatus {
         }
     }
 
-    public get getAnswerStatusData(): AnswerStatusData {
-        return this.answerStatusData;
+    public ngOnInit(): void {
     }
 
     public get getIsPuzzle1Complete(): boolean {
@@ -21,6 +26,7 @@ export class AnswerStatus {
 
     public setPuzzle1Complete() {
         this.answerStatusData.isPuzzle1Complete = true;
+        this.storeAnswerStatusData();
     }
 
     public get getIsPuzzle2Complete(): boolean {
@@ -29,6 +35,7 @@ export class AnswerStatus {
 
     public setPuzzle2Complete() {
         this.answerStatusData.isPuzzle2Complete = true;
+        this.storeAnswerStatusData();        
     }
 
     public get getIsPuzzle3Complete(): boolean {
@@ -37,6 +44,7 @@ export class AnswerStatus {
 
     public setPuzzle3Complete() {
         this.answerStatusData.isPuzzle3Complete = true;
+        this.storeAnswerStatusData();
     }
 
     public get getIsComplete() {
@@ -49,5 +57,10 @@ export class AnswerStatus {
             isPuzzle2Complete: false,
             isPuzzle3Complete: false
         };
+        this.storeAnswerStatusData();
+    }
+
+    private storeAnswerStatusData() {
+        this._storageService.setAnswerStateInLocalStorage(this.answerStatusData);
     }
 }

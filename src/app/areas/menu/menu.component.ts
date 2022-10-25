@@ -12,10 +12,10 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   @Input()
-  public permissionsStatus: PermissionsStatus = new PermissionsStatus();
+  public permissionsStatus: PermissionsStatus;
 
   @Input()
-  public visibilityStatus: VisibilityStatus = new VisibilityStatus();
+  public visibilityStatus: VisibilityStatus;
 
   @Output()
   public requestSignOut = new EventEmitter();
@@ -28,14 +28,17 @@ export class MenuComponent implements OnInit {
   }
 
   public showContents() {
+    console.log('showing c');
     this.visibilityStatus.showContents();
   }
 
   public showPuzzle1() {
+    console.log('showing 1');
     this.visibilityStatus.showPuzzle1();
   }
 
   public showPuzzle2() {
+    console.log('showing 2');
     this.visibilityStatus.showPuzzle2();
   }
 

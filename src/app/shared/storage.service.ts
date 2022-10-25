@@ -18,21 +18,21 @@ export class StorageService {
   private readonly _visibilityStatus = 'visibility-status';
   private readonly _isValidatedStatus = 'is-validated';
 
-  public setAnswerStateInLocalStorage(answerStatus: AnswerStatus): void {
-    if (answerStatus) {
-      localStorage.setItem(this._answerStatus, JSON.stringify(answerStatus.getAnswerStatusData));  
+  public setAnswerStateInLocalStorage(answerStatusData: AnswerStatusData): void {
+    if (answerStatusData) {
+      localStorage.setItem(this._answerStatus, JSON.stringify(answerStatusData));  
     }
   }
 
-  public setPermissionsStateInLocalStorage(permissionsStatus: PermissionsStatus): void {
-    if (permissionsStatus) {
-      localStorage.setItem(this._permissionsStatus, JSON.stringify(permissionsStatus.getPermissionsStatusData));  
+  public setPermissionsStateInLocalStorage(permissionsStatusData: PermissionsStatusData): void {
+    if (permissionsStatusData) {
+      localStorage.setItem(this._permissionsStatus, JSON.stringify(permissionsStatusData));  
     }
   }
 
-  public setVisibilityStateInLocalStorage(visibilityStatus: VisibilityStatus): void {
-    if (visibilityStatus) {
-      localStorage.setItem(this._visibilityStatus, JSON.stringify(visibilityStatus.getVisibilityStatusData));  
+  public setVisibilityStateInLocalStorage(visibilityStatusData: VisibilityStatusData): void {
+    if (visibilityStatusData) {
+      localStorage.setItem(this._visibilityStatus, JSON.stringify(visibilityStatusData));  
     }
   }
 
@@ -40,36 +40,33 @@ export class StorageService {
     localStorage.setItem(this._isValidatedStatus, JSON.stringify(isValidated));
   }
 
-  public getAnswerStateFromLocalStorage(): AnswerStatus {
+  public getAnswerStateFromLocalStorage(): AnswerStatusData {
     const answerStatusDataString = localStorage.getItem(this._answerStatus);
 
     if (!answerStatusDataString) {
-      return new AnswerStatus();
+      return null;
     } else {
-      let answerStatusData: AnswerStatusData = JSON.parse(answerStatusDataString);
-      return new AnswerStatus(answerStatusData);
+      return JSON.parse(answerStatusDataString);
     }
   }
 
-  public getPermissionsStateFromLocalStorage(): PermissionsStatus {
+  public getPermissionsStateFromLocalStorage(): PermissionsStatusData {
     const permissionsStatusDataString = localStorage.getItem(this._permissionsStatus);
 
     if (!permissionsStatusDataString) {
-      return new PermissionsStatus();
+      return null;
     } else {
-      let permissionsStatusData: PermissionsStatusData = JSON.parse(permissionsStatusDataString);
-      return new PermissionsStatus(permissionsStatusData);
+      return JSON.parse(permissionsStatusDataString);
     }
   }
 
-  public getVisibilityStateFromLocalStorage(): VisibilityStatus {
+  public getVisibilityStateFromLocalStorage(): VisibilityStatusData {
     const visibilityStatusDataString = localStorage.getItem(this._visibilityStatus);
 
     if (!visibilityStatusDataString) {
-      return new VisibilityStatus();
+      return null;
     } else {
-      let visibilityStatusData: VisibilityStatusData = JSON.parse(visibilityStatusDataString);
-      return new VisibilityStatus(visibilityStatusData);
+      return JSON.parse(visibilityStatusDataString);
     }
   }
 

@@ -1,4 +1,4 @@
-import { ThrowStmt } from '@angular/compiler';
+import { ThisReceiver, ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { AnswerStatus } from './shared/answer-status';
 import { PageOptions } from './shared/page-options';
@@ -20,10 +20,19 @@ export class AppComponent implements OnInit {
 
   public isValidated = false;
 
-  public answerStatus: AnswerStatus = new AnswerStatus();
-  public visibilityStatus: VisibilityStatus = new VisibilityStatus();
-  public permissionsStatus: PermissionsStatus = new PermissionsStatus();
-
+  /*
+  OK, so we have a bit of an issue here.
+  The idea was to change it so that each status below is in charge of storing its own data.
+  This is because places other than here also update values on some of these statuses, and these values aren't getting persisted in this case.
+  Whereas, having the status look after its own storage would mean this is more easily done.
+  However, to do this requires injecting the storage service into each of these statuses, which changes when these become instantiated.
+  We get round this for now by loading the data on construction rather than on init.
+  This isn't very clean, but I think it works.
+  */
+  public answerStatus: AnswerStatus = new AnswerStatus(this._storageService);
+  public visibilityStatus: VisibilityStatus = new VisibilityStatus(this._storageService);
+  public permissionsStatus: PermissionsStatus = new PermissionsStatus(this._storageService);
+  
   public ngOnInit(): void {
     this.loadFromStorage();
   }
@@ -46,19 +55,16 @@ export class AppComponent implements OnInit {
 
   public deselectEverything() {
     this.visibilityStatus.deselectEverything();
-    this.updateStorage();
   }
 
   public successfulValidation() {
-    this.isValidated = true;
+    this.setIsValidated();
     this.permissionsStatus.completeValidation();
     this.visibilityStatus.showContents();
-    this.updateStorage();
   }
 
   public showContents() {
     this.visibilityStatus.showContents();
-    this.updateStorage();
   }
 
   public get isPuzzle1Available(): boolean {
@@ -69,7 +75,6 @@ export class AppComponent implements OnInit {
     this.answerStatus.setPuzzle1Complete();
     this.permissionsStatus.setPuzzle1Complete();
     this.visibilityStatus.showContents();
-    this.updateStorage();
   }
 
   public get isPuzzle2Available(): boolean {
@@ -80,7 +85,6 @@ export class AppComponent implements OnInit {
     this.answerStatus.setPuzzle2Complete();
     this.permissionsStatus.setPuzzle2Complete();
     this.visibilityStatus.showContents();
-    this.updateStorage();
   }
 
   public get isPuzzle3Available(): boolean {
@@ -102,21 +106,24 @@ export class AppComponent implements OnInit {
     this.answerStatus.resetAllAnswers();
     this.permissionsStatus.revokePermissions();
     this.visibilityStatus.deselectEverything();
+    this.setIsNotValidated();
+  }
+
+  public setIsValidated() {
+    this.isValidated = true;
+    this.updateStorage();
+  }
+
+  public setIsNotValidated() {
     this.isValidated = false;
     this.updateStorage();
   }
 
   private loadFromStorage(): void {
-    this.answerStatus = this._storageService.getAnswerStateFromLocalStorage();
-    this.permissionsStatus = this._storageService.getPermissionsStateFromLocalStorage();
-    this.visibilityStatus = this._storageService.getVisibilityStateFromLocalStorage();
     this.isValidated = this._storageService.getIsValidated();
   }
 
   private updateStorage() {
-    this._storageService.setAnswerStateInLocalStorage(this.answerStatus);
-    this._storageService.setPermissionsStateInLocalStorage(this.permissionsStatus);
-    this._storageService.setVisibilityStateInLocalStorage(this.visibilityStatus);
     this._storageService.setIsValidated(this.isValidated);
   }
 }

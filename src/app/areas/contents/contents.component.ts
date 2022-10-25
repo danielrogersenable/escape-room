@@ -16,10 +16,10 @@ export class ContentsComponent implements OnInit {
   }
 
   @Input()
-  public answerStatus = new AnswerStatus();
+  public answerStatus;
 
   @Input()
-  public permissionsStatus = new PermissionsStatus();
+  public permissionsStatus;
 
   @Output()
   public selectedPuzzle = new EventEmitter<PageOptions>();
