@@ -1,51 +1,66 @@
-export class PermissionsStatus {
-    private isSignInPermitted: boolean = true;
-    private isSignOutPermitted: boolean = false;
+import { PermissionsStatusData } from "./permissions-status-data";
 
-    private isContentsPermitted: boolean = false;
-    private isPuzzle1Permitted: boolean = false;
-    private isPuzzle2Permitted: boolean = false;
-    private isPuzzle3Permitted: boolean = false;
+export class PermissionsStatus {
+    private permissionsStatusData: PermissionsStatusData = null;
+
+    constructor(permissionsStatusData: PermissionsStatusData = null) {
+        if (permissionsStatusData) {
+            this.permissionsStatusData = permissionsStatusData;
+        } else {
+            this.permissionsStatusData = {
+                isSignInPermitted: true,
+                isSignOutPermitted: false,
+                isContentsPermitted: false,
+                isPuzzle1Permitted: false,
+                isPuzzle2Permitted: false,
+                isPuzzle3Permitted: false
+            };
+        }
+    }
+
+    public get getPermissionsStatusData(): PermissionsStatusData {
+        return this.permissionsStatusData;
+    }
 
     public revokePermissions() {
-        this.isSignInPermitted = true;
-        this.isSignOutPermitted = false;
+        this.permissionsStatusData.isSignInPermitted = true;
+        this.permissionsStatusData.isSignOutPermitted = false;
 
-        this.isContentsPermitted = false;
-        this.isPuzzle1Permitted = false;
-        this.isPuzzle2Permitted = false;
-        this.isPuzzle3Permitted = false;
+        this.permissionsStatusData.isContentsPermitted = false;
+        this.permissionsStatusData.isPuzzle1Permitted = false;
+        this.permissionsStatusData.isPuzzle2Permitted = false;
+        this.permissionsStatusData.isPuzzle3Permitted = false;
     }
 
     public completeValidation() {
-        this.isSignInPermitted = false;
-        this.isSignOutPermitted = true;
+        this.permissionsStatusData.isSignInPermitted = false;
+        this.permissionsStatusData.isSignOutPermitted = true;
         this.permitContents();
         this.permitPuzzle1();
     }
     
     public get getIsSignInPermitted(): boolean {
-        return this.isSignInPermitted;
+        return this.permissionsStatusData.isSignInPermitted;
     }
 
     public get getIsSignOutPermitted(): boolean {
-        return this.isSignOutPermitted;
+        return this.permissionsStatusData.isSignOutPermitted;
     }
 
     public get getIsContentsPermitted(): boolean {
-        return this.isContentsPermitted;
+        return this.permissionsStatusData.isContentsPermitted;
     }
 
     public get getIsPuzzle1Permitted(): boolean {
-        return this.isPuzzle1Permitted;
+        return this.permissionsStatusData.isPuzzle1Permitted;
     }
 
     public get getIsPuzzle2Permitted(): boolean {
-        return this.isPuzzle2Permitted;
+        return this.permissionsStatusData.isPuzzle2Permitted;
     }
 
     public get getIsPuzzle3Permitted(): boolean {
-        return this.isPuzzle3Permitted;
+        return this.permissionsStatusData.isPuzzle3Permitted;
     }
 
     public setPuzzle1Complete() {
@@ -60,18 +75,18 @@ export class PermissionsStatus {
     }
 
     private permitContents() {
-        this.isContentsPermitted = true;
+        this.permissionsStatusData.isContentsPermitted = true;
     }
 
     private permitPuzzle1() {
-        this.isPuzzle1Permitted = true;
+        this.permissionsStatusData.isPuzzle1Permitted = true;
     }
 
     private permitPuzzle2() {
-        this.isPuzzle2Permitted = true;
+        this.permissionsStatusData.isPuzzle2Permitted = true;
     }
 
     private permitPuzzle3() {
-        this.isPuzzle3Permitted = true;
+        this.permissionsStatusData.isPuzzle3Permitted = true;
     }
 }

@@ -1,49 +1,65 @@
+import { VisibilityStatusData } from "./visibility-status-data";
+
 export class VisibilityStatus {
-    private isContentsVisible: boolean = false;
-    private isPuzzle1Visible: boolean = false;
-    private isPuzzle2Visible: boolean = false;
-    private isPuzzle3Visible: boolean = false;    
+    private visibilityStatusData: VisibilityStatusData = null;
+    
+    constructor(visibilityStatusData: VisibilityStatusData = null) {
+        if (visibilityStatusData) {
+            this.visibilityStatusData = visibilityStatusData;
+        } else {
+            this.visibilityStatusData = {
+                isContentsVisible: false,
+                isPuzzle1Visible: false,
+                isPuzzle2Visible: false,
+                isPuzzle3Visible: false
+            };
+        }
+    }
+
+    public get getVisibilityStatusData(): VisibilityStatusData {
+        return this.visibilityStatusData;
+    }
 
     public deselectEverything() {
-        this.isContentsVisible = false;
-        this.isPuzzle1Visible = false;
-        this.isPuzzle2Visible = false;
-        this.isPuzzle3Visible = false;
+        this.visibilityStatusData.isContentsVisible = false;
+        this.visibilityStatusData.isPuzzle1Visible = false;
+        this.visibilityStatusData.isPuzzle2Visible = false;
+        this.visibilityStatusData.isPuzzle3Visible = false;
     }
 
     public get getIsContentsVisible(): boolean {
-        return this.isContentsVisible;
+        return this.visibilityStatusData.isContentsVisible;
     }
 
     public showContents() {
         this.deselectEverything();
-        this.isContentsVisible = true;
+        this.visibilityStatusData.isContentsVisible = true;
     }
 
     public get getIsPuzzle1Visible(): boolean {
-        return this.isPuzzle1Visible;
+        return this.visibilityStatusData.isPuzzle1Visible;
     }
 
     public showPuzzle1() {
         this.deselectEverything();
-        this.isPuzzle1Visible = true;
+        this.visibilityStatusData.isPuzzle1Visible = true;
     }
 
     public get getIsPuzzle2Visible(): boolean {
-        return this.isPuzzle2Visible;
+        return this.visibilityStatusData.isPuzzle2Visible;
     }
 
     public showPuzzle2() {
         this.deselectEverything();
-        this.isPuzzle2Visible = true;
+        this.visibilityStatusData.isPuzzle2Visible = true;
     }
 
     public get getIsPuzzle3Visible(): boolean {
-        return this.isPuzzle3Visible;
+        return this.visibilityStatusData.isPuzzle3Visible;
     }
 
     public showPuzzle3() {
         this.deselectEverything();
-        this.isPuzzle3Visible = true;
+        this.visibilityStatusData.isPuzzle3Visible = true;
     }
 }
