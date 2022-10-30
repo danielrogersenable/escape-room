@@ -41,6 +41,9 @@ export class AppComponent implements OnInit {
     this.deselectEverything();
 
     switch(pageOptions) {
+      case PageOptions.Intro:
+        this.visibilityStatus.showIntro();
+        break;
       case PageOptions.Puzzle1:
         this.visibilityStatus.showPuzzle1();
         break;
@@ -67,8 +70,10 @@ export class AppComponent implements OnInit {
     this.visibilityStatus.showContents();
   }
 
-  public get isPuzzle1Available(): boolean {
-    return this.permissionsStatus.getIsPuzzle1Permitted;
+  public handleIntroResult() {
+    this.answerStatus.setIntroComplete();
+    this.permissionsStatus.setIntroComplete();
+    this.visibilityStatus.showContents();
   }
 
   public handlePuzzle1Result() {
@@ -77,18 +82,10 @@ export class AppComponent implements OnInit {
     this.visibilityStatus.showContents();
   }
 
-  public get isPuzzle2Available(): boolean {
-    return this.permissionsStatus.getIsPuzzle2Permitted;
-  }
-
   public handlePuzzle2Result() {
     this.answerStatus.setPuzzle2Complete();
     this.permissionsStatus.setPuzzle2Complete();
     this.visibilityStatus.showContents();
-  }
-
-  public get isPuzzle3Available(): boolean {
-    return this.permissionsStatus.getIsPuzzle3Permitted;
   }
 
   public handlePuzzle3Result() {

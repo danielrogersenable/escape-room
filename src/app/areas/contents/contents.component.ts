@@ -24,6 +24,10 @@ export class ContentsComponent implements OnInit {
   @Output()
   public selectedPuzzle = new EventEmitter<PageOptions>();
 
+  public selectIntro() {
+    this.selectedPuzzle.emit(PageOptions.Intro);
+  }
+
   public selectPuzzle1() {
     this.selectedPuzzle.emit(PageOptions.Puzzle1);
   }

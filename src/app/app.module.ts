@@ -13,6 +13,7 @@ import { AnswerComponent } from './shared/answer/answer.component';
 import { ContentsComponent } from './areas/contents/contents.component';
 import { TileComponent } from './shared/tile/tile.component';
 import { MenuComponent } from './areas/menu/menu.component';
+import { IntroComponent } from './areas/intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MenuComponent } from './areas/menu/menu.component';
     AnswerComponent,
     ContentsComponent,
     TileComponent,
-    MenuComponent
+    MenuComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,

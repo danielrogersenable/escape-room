@@ -29,6 +29,7 @@ export class VisibilityStatus implements OnInit {
     public deselectEverything() {
         this.visibilityStatusData = {
             isContentsVisible: false,
+            isIntroVisible: false,
             isPuzzle1Visible: false,
             isPuzzle2Visible: false,
             isPuzzle3Visible: false
@@ -43,6 +44,16 @@ export class VisibilityStatus implements OnInit {
     public showContents() {
         this.deselectEverything();
         this.visibilityStatusData.isContentsVisible = true;
+        this.storeVisibilityStatusData();
+    }
+
+    public get getIsIntroVisible(): boolean {
+        return this.visibilityStatusData.isIntroVisible;
+    }
+
+    public showIntro() {
+        this.deselectEverything();
+        this.visibilityStatusData.isIntroVisible = true;
         this.storeVisibilityStatusData();
     }
 

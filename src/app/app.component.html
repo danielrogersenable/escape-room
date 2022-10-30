@@ -18,6 +18,12 @@
       </div>  
     </div>
     <div class="main-body">
+      <div *ngIf="permissionsStatus.getIsIntroPermitted && visibilityStatus.getIsIntroVisible">
+        <app-intro
+          [isComplete]="answerStatus.getIsIntroComplete"
+          (correctAnswerProvided)="handleIntroResult()"
+          (close)="showContents()"></app-intro>
+      </div>
       <div *ngIf="permissionsStatus.getIsPuzzle1Permitted && visibilityStatus.getIsPuzzle1Visible">
         <app-puzzle1
           [isComplete]="answerStatus.getIsPuzzle1Complete"

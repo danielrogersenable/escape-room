@@ -2,14 +2,17 @@
     <li *ngIf="permissionsStatus.getIsContentsPermitted">
         <a (click)="showContents()">All puzzles</a>
     </li>
+    <li *ngIf="permissionsStatus.getIsIntroPermitted">
+        <a (click)="showIntro()">Intro</a>
+    </li>
     <li *ngIf="permissionsStatus.getIsPuzzle1Permitted">
-        <a (click)="showPuzzle1()">Puzzle 1</a>
+        <a (click)="showPuzzle1()">Hartnell</a>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle2Permitted">
-        <a (click)="showPuzzle2()">Puzzle 2</a>
+        <a (click)="showPuzzle2()">Troughton</a>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle3Permitted">
-        <a (click)="showPuzzle3()">Puzzle 3</a>
+        <a (click)="showPuzzle3()">Pertwee</a>
     </li>
     <li *ngIf="permissionsStatus.getIsSignInPermitted">
         <a (click)="showSignIn()">Sign in</a>

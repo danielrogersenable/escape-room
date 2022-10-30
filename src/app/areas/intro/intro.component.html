@@ -1,0 +1,13 @@
+<p>Welcome to this escape room! Some rules/observations:</p>
+<ul>
+    <li>No puzzles require guesswork - there is never a need to brute force an answer. Some puzzles may not be solvable until later, though.</li>
+    <li>Googling things is not just allowed but encouraged/expected!</li>
+</ul>
+<p>Make sense? Type "ready" if you're ready to go!</p>
+<app-answer
+    [correctAnswer]="correctAnswer"
+    [errorMessage]="errorMessage"
+    [isComplete]="isComplete"
+    (successfulValidation)="handleValidationResponse()"
+    (closeItem)="handleClose()">
+</app-answer>

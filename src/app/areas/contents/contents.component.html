@@ -3,24 +3,31 @@
 </p>
 
 <div class="tile-grid">
+    <div *ngIf="permissionsStatus.getIsIntroPermitted" class="tile-selectable" (click)="selectIntro()">
+        <app-tile
+            [title]="'Intro'"
+            [description]="'Begin adventures in space and time'"
+            [complete]="answerStatus.getIsIntroComplete">
+        </app-tile>
+    </div>
     <div *ngIf="permissionsStatus.getIsPuzzle1Permitted" class="tile-selectable" (click)="selectPuzzle1()">
         <app-tile
-            [title]="'Puzzle 1'"
-            [description]="'Puzzle 1 description goes here'"
+            [title]="'Hartnell'"
+            [description]="'Go forward in your beliefs'"
             [complete]="answerStatus.getIsPuzzle1Complete">
         </app-tile>
     </div>
     <div *ngIf="permissionsStatus.getIsPuzzle2Permitted" class="tile-selectable" (click)="selectPuzzle2()">
         <app-tile
-            [title]="'Puzzle 2'"
-            [description]="'Puzzle 2 description goes here'" 
+            [title]="'Troughton'"
+            [description]="'Nobody in the universe can do what we\'re doing'" 
             [complete]="answerStatus.getIsPuzzle2Complete">
         </app-tile>
     </div>
     <div *ngIf="permissionsStatus.getIsPuzzle3Permitted" class="tile-selectable" (click)="selectPuzzle3()">
         <app-tile
-            [title]="'Puzzle 3'"
-            [description]="'Puzzle 3 description goes here'"
+            [title]="'Pertwee'"
+            [description]="'While there\'s life, there\'s...'"
             [complete]="answerStatus.getIsPuzzle3Complete">
         </app-tile>    
     </div>

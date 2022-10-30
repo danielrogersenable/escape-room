@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-puzzle3',
-  templateUrl: './puzzle3.component.html',
-  styleUrls: ['./puzzle3.component.scss']
+  selector: 'app-intro',
+  templateUrl: './intro.component.html',
+  styleUrls: ['./intro.component.scss']
 })
-export class Puzzle3Component implements OnInit {
+export class IntroComponent implements OnInit {
 
   constructor() { }
 
@@ -15,9 +15,9 @@ export class Puzzle3Component implements OnInit {
 
   @Input()
   public isComplete = false;
-  
+
   @Output()
-  correctAnswerProvided = new EventEmitter();
+  public correctAnswerProvided = new EventEmitter(); 
 
   @Output()
   public close = new EventEmitter(); 
@@ -26,8 +26,8 @@ export class Puzzle3Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'Herman Melville';
-  public errorMessage = 'That wasn\'t right. Please try again.';
+  public correctAnswer = 'ready';
+  public errorMessage = 'The answer here is just the word "ready". This wasn\'t intended to be a difficult puzzle!';
 
   public handleValidationResponse(): void {
     this.correctAnswerProvided.emit(); 

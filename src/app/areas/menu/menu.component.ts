@@ -28,17 +28,18 @@ export class MenuComponent implements OnInit {
   }
 
   public showContents() {
-    console.log('showing c');
     this.visibilityStatus.showContents();
   }
 
+  public showIntro() {
+    this.visibilityStatus.showIntro();
+  }
+
   public showPuzzle1() {
-    console.log('showing 1');
     this.visibilityStatus.showPuzzle1();
   }
 
   public showPuzzle2() {
-    console.log('showing 2');
     this.visibilityStatus.showPuzzle2();
   }
 

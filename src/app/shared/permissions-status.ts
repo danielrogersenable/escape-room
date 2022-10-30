@@ -28,6 +28,7 @@ export class PermissionsStatus implements OnInit {
         this.permissionsStatusData = {
             isSignInPermitted: true,
             isSignOutPermitted: false,
+            isIntroPermitted: false,
             isContentsPermitted: false,
             isPuzzle1Permitted: false,
             isPuzzle2Permitted: false,
@@ -36,13 +37,6 @@ export class PermissionsStatus implements OnInit {
         this.storePermissionsStatusData();
     }
 
-    public completeValidation() {
-        this.permissionsStatusData.isSignInPermitted = false;
-        this.permissionsStatusData.isSignOutPermitted = true;
-        this.permitContents();
-        this.permitPuzzle1();
-    }
-    
     public get getIsSignInPermitted(): boolean {
         return this.permissionsStatusData.isSignInPermitted;
     }
@@ -53,6 +47,10 @@ export class PermissionsStatus implements OnInit {
 
     public get getIsContentsPermitted(): boolean {
         return this.permissionsStatusData.isContentsPermitted;
+    }
+
+    public get getIsIntroPermitted(): boolean {
+        return this.permissionsStatusData.isIntroPermitted;
     }
 
     public get getIsPuzzle1Permitted(): boolean {
@@ -67,15 +65,31 @@ export class PermissionsStatus implements OnInit {
         return this.permissionsStatusData.isPuzzle3Permitted;
     }
 
-    public setPuzzle1Complete() {
-        this.permitPuzzle2();
+    public completeValidation() {
+        this.permissionsStatusData.isSignInPermitted = false;
+        this.permissionsStatusData.isSignOutPermitted = true;
+        this.permitContents();
+        this.permitIntro();
     }
-
-    public setPuzzle2Complete() {
+    
+    public setIntroComplete() {
+        this.permitPuzzle1();
+        this.permitPuzzle2();
         this.permitPuzzle3();
     }
 
+    public setPuzzle1Complete() {
+    }
+
+    public setPuzzle2Complete() {
+    }
+
     public setPuzzle3Complete() {
+    }
+
+    private permitIntro() {
+        this.permissionsStatusData.isIntroPermitted = true;
+        this.storePermissionsStatusData();
     }
 
     private permitContents() {

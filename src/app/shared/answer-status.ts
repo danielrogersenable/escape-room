@@ -20,6 +20,15 @@ export class AnswerStatus implements OnInit {
     public ngOnInit(): void {
     }
 
+    public get getIsIntroComplete(): boolean {
+        return this.answerStatusData.isIntroComplete;
+    }
+
+    public setIntroComplete() {
+        this.answerStatusData.isIntroComplete = true;
+        this.storeAnswerStatusData();
+    }
+
     public get getIsPuzzle1Complete(): boolean {
         return this.answerStatusData.isPuzzle1Complete;
     }
@@ -53,6 +62,7 @@ export class AnswerStatus implements OnInit {
 
     public resetAllAnswers() {
         this.answerStatusData = {
+            isIntroComplete: false,
             isPuzzle1Complete: false,
             isPuzzle2Complete: false,
             isPuzzle3Complete: false
