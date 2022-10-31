@@ -29,7 +29,7 @@ export class Puzzle1Component implements OnInit {
   public correctAnswer = 'decade';
   public errorMessage = 'That wasn\'t right. Please try again.';
 
-  public handleValidationResponse(): void {
+  public handleCorrectAnswerProvided(): void {
     this.correctAnswerProvided.emit(); 
     this.close.emit();
   }

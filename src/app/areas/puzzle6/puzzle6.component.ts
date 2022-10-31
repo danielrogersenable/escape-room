@@ -26,10 +26,10 @@ export class Puzzle6Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'placeholder';
+  public correctAnswer = 'Ontario';
   public errorMessage = 'That wasn\'t right. Please try again.';
 
-  public handleValidationResponse(): void {
+  public handleCorrectAnswerProvided(): void {
     this.correctAnswerProvided.emit();
     this.close.emit();
   }

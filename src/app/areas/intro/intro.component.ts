@@ -29,7 +29,7 @@ export class IntroComponent implements OnInit {
   public correctAnswer = 'ready';
   public errorMessage = 'The answer here is just the word "ready". This wasn\'t intended to be a difficult puzzle!';
 
-  public handleValidationResponse(): void {
+  public handleCorrectAnswerProvided(): void {
     this.correctAnswerProvided.emit();
   }
 

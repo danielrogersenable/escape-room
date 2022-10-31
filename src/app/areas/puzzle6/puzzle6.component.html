@@ -1,9 +1,18 @@
-<p>This puzzle is a placeholder. Answer "placeholder" for now to win.</p>
+<p>A scrap of paper you find has some scribbled notes on it:</p>
+<div class="notepad">
+    <div class="top"></div>
+    <div class="paper">
+        <p>(George W Bush president number).(David Fincher, Brad Pitt, Morgan Freeman film)(U+004E)</p>
+        <p>(Route from Cleveland to Cayce).(Olympian Muses)(U times 2)</p>
+        <p>Find it and you'll have a splash!</p>        
+    </div>
+</div>
+<p>What could it mean?</p>
 
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"
     [isComplete]="isComplete"
-    (onComplete)="handleValidationResponse()"
+    (onComplete)="handleCorrectAnswerProvided()"
     (closeItem)="handleClose()">
 </app-answer>

@@ -1,0 +1,33 @@
+@import '/src/_variables.scss';
+
+$paper-color: $color-button-text;
+$paper-line: $color-primary;
+
+.notepad {
+  box-shadow: 10px 10px 40px rgba($color-primary, .15);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.top {
+  width: 100%;
+  height: 50px;
+  background: $color-primary;
+  border-radius: 5px 5px 0 0;
+}
+
+.paper {
+  padding: 35px 20px;
+  background: repeating-linear-gradient($paper-color, $paper-color 31px, $paper-line 31px, $paper-line 32px);
+  font-family: 'Bradley Hand ITC', cursive;
+  line-height: 32px;
+  outline: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: $color-primary;
+
+  p {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+}
