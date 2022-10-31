@@ -27,7 +27,7 @@ export class AnswerComponent implements OnInit {
   public displayReturnToMenu = true;
 
   @Output()
-  public successfulValidation = new EventEmitter();
+  public onComplete = new EventEmitter();
 
   @Output()
   public closeItem = new EventEmitter();
@@ -47,8 +47,7 @@ export class AnswerComponent implements OnInit {
 
     if (successfulValidation) {
       this.displayError = false;
-      this.successfulValidation.emit();
-      this.closeItem.emit();
+      this.onComplete.emit();
     } else {
       this.displayError = true;
     }

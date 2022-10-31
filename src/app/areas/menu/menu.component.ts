@@ -47,6 +47,50 @@ export class MenuComponent implements OnInit {
     this.visibilityStatus.showPuzzle3();
   }
 
+  public showPuzzle4() {
+    this.visibilityStatus.showPuzzle4();
+  }
+
+  public showPuzzle5() {
+    this.visibilityStatus.showPuzzle5();
+  }
+
+  public showPuzzle6() {
+    this.visibilityStatus.showPuzzle6();
+  }
+
+  public showPuzzle7() {
+    this.visibilityStatus.showPuzzle7();
+  }
+
+  public showPuzzle8() {
+    this.visibilityStatus.showPuzzle8();
+  }
+
+  public showPuzzle9() {
+    this.visibilityStatus.showPuzzle9();
+  }
+
+  public showPuzzle10() {
+    this.visibilityStatus.showPuzzle10();
+  }
+
+  public showPuzzle11() {
+    this.visibilityStatus.showPuzzle11();
+  }
+
+  public showPuzzle12() {
+    this.visibilityStatus.showPuzzle12();
+  }
+
+  public showPuzzle13() {
+    this.visibilityStatus.showPuzzle13();
+  }
+
+  public showPuzzle14() {
+    this.visibilityStatus.showPuzzle14();
+  }
+
   public showSignIn() {
   }
 

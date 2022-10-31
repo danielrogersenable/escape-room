@@ -30,7 +30,7 @@ export class IntroComponent implements OnInit {
   public errorMessage = 'The answer here is just the word "ready". This wasn\'t intended to be a difficult puzzle!';
 
   public handleValidationResponse(): void {
-    this.correctAnswerProvided.emit(); 
+    this.correctAnswerProvided.emit();
   }
 
   public handleClose(): void {

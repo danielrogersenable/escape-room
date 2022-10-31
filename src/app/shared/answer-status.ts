@@ -156,7 +156,20 @@ export class AnswerStatus implements OnInit {
     }
 
     public get getIsComplete() {
-        return this.answerStatusData.isPuzzle1Complete && this.answerStatusData.isPuzzle2Complete && this.answerStatusData.isPuzzle3Complete;
+        return this.answerStatusData.isPuzzle1Complete
+        && this.answerStatusData.isPuzzle2Complete
+        && this.answerStatusData.isPuzzle3Complete
+        && this.answerStatusData.isPuzzle4Complete
+        && this.answerStatusData.isPuzzle5Complete
+        && this.answerStatusData.isPuzzle6Complete
+        && this.answerStatusData.isPuzzle7Complete
+        && this.answerStatusData.isPuzzle8Complete
+        && this.answerStatusData.isPuzzle9Complete
+        && this.answerStatusData.isPuzzle10Complete
+        && this.answerStatusData.isPuzzle11Complete
+        && this.answerStatusData.isPuzzle12Complete
+        && this.answerStatusData.isPuzzle13Complete
+        && this.answerStatusData.isPuzzle14Complete;
     }
 
     public resetAllAnswers() {

@@ -26,11 +26,12 @@ export class Puzzle4Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'placeholder';
+  public correctAnswer = 'corny';
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleValidationResponse(): void {
-    this.correctAnswerProvided.emit(); 
+    this.correctAnswerProvided.emit();
+    this.close.emit();
   }
 
   public handleClose(): void {

@@ -2,12 +2,16 @@
 <ul>
     <li>No puzzles require guesswork - there is never a need to brute force an answer. Some puzzles may not be solvable until later, though.</li>
     <li>Googling things is not just allowed but encouraged/expected!</li>
+    <li>There's nothing hidden in HTML, URLs etc - everything you need will be visible on a page.</li>
+    <li>You may not be able to solve some puzzles immediately. Likewise, parts of some earlier puzzles might be required for later puzzles.</li>
 </ul>
 <p>Make sense? Type "ready" if you're ready to go!</p>
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"
     [isComplete]="isComplete"
-    (successfulValidation)="handleValidationResponse()"
+    (onComplete)="handleValidationResponse()"
     (closeItem)="handleClose()">
 </app-answer>
+
+<p *ngIf="isComplete">Here's some stuff for getting the answer right!</p>

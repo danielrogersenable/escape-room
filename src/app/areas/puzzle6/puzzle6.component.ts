@@ -30,7 +30,8 @@ export class Puzzle6Component implements OnInit {
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleValidationResponse(): void {
-    this.correctAnswerProvided.emit(); 
+    this.correctAnswerProvided.emit();
+    this.close.emit();
   }
 
   public handleClose(): void {
