@@ -53,6 +53,39 @@ export class AppComponent implements OnInit {
       case PageOptions.Puzzle3:
         this.visibilityStatus.showPuzzle3();
         break;
+      case PageOptions.Puzzle4:
+        this.visibilityStatus.showPuzzle4();
+        break;
+      case PageOptions.Puzzle5:
+        this.visibilityStatus.showPuzzle5();
+        break;
+      case PageOptions.Puzzle6:
+        this.visibilityStatus.showPuzzle6();
+        break;
+      case PageOptions.Puzzle7:
+        this.visibilityStatus.showPuzzle7();
+        break;
+      case PageOptions.Puzzle8:
+        this.visibilityStatus.showPuzzle8();
+        break;
+      case PageOptions.Puzzle9:
+        this.visibilityStatus.showPuzzle9();
+        break;
+      case PageOptions.Puzzle10:
+        this.visibilityStatus.showPuzzle10();
+        break;
+      case PageOptions.Puzzle11:
+        this.visibilityStatus.showPuzzle11();
+        break;
+      case PageOptions.Puzzle12:
+        this.visibilityStatus.showPuzzle12();
+        break;
+      case PageOptions.Puzzle13:
+        this.visibilityStatus.showPuzzle13();
+        break;
+      case PageOptions.Puzzle14:
+        this.visibilityStatus.showPuzzle14();
+        break;
     }
   }
 
@@ -91,6 +124,83 @@ export class AppComponent implements OnInit {
   public handlePuzzle3Result() {
     this.answerStatus.setPuzzle3Complete();
     this.permissionsStatus.setPuzzle3Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle4Result() {
+    this.answerStatus.setPuzzle4Complete();
+    this.permissionsStatus.setPuzzle4Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle5Result() {
+    this.answerStatus.setPuzzle5Complete();
+    this.permissionsStatus.setPuzzle5Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle6Result() {
+    this.answerStatus.setPuzzle6Complete();
+    this.permissionsStatus.setPuzzle6Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle7Result() {
+    this.answerStatus.setPuzzle7Complete();
+    this.permissionsStatus.setPuzzle7Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle8Result() {
+    this.answerStatus.setPuzzle8Complete();
+    this.permissionsStatus.setPuzzle8Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle9Result() {
+    this.answerStatus.setPuzzle9Complete();
+    this.permissionsStatus.setPuzzle9Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle10Result() {
+    this.answerStatus.setPuzzle10Complete();
+    this.permissionsStatus.setPuzzle10Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle11Result() {
+    this.answerStatus.setPuzzle11Complete();
+    this.permissionsStatus.setPuzzle11Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle12Result() {
+    this.answerStatus.setPuzzle12Complete();
+    this.permissionsStatus.setPuzzle12Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle13Result() {
+    this.answerStatus.setPuzzle13Complete();
+    this.permissionsStatus.setPuzzle13Complete();
+    this.visibilityStatus.showContents();
+    this.updateStorage();
+  }
+
+  public handlePuzzle14Result() {
+    this.answerStatus.setPuzzle14Complete();
+    this.permissionsStatus.setPuzzle14Complete();
     this.visibilityStatus.showContents();
     this.updateStorage();
   }

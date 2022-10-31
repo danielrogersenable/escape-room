@@ -56,6 +56,105 @@ export class AnswerStatus implements OnInit {
         this.storeAnswerStatusData();
     }
 
+    public get getIsPuzzle4Complete(): boolean {
+        return this.answerStatusData.isPuzzle4Complete;
+    }
+
+    public setPuzzle4Complete() {
+        this.answerStatusData.isPuzzle4Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle5Complete(): boolean {
+        return this.answerStatusData.isPuzzle5Complete;
+    }
+
+    public setPuzzle5Complete() {
+        this.answerStatusData.isPuzzle5Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle6Complete(): boolean {
+        return this.answerStatusData.isPuzzle6Complete;
+    }
+
+    public setPuzzle6Complete() {
+        this.answerStatusData.isPuzzle6Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle7Complete(): boolean {
+        return this.answerStatusData.isPuzzle7Complete;
+    }
+
+    public setPuzzle7Complete() {
+        this.answerStatusData.isPuzzle7Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle8Complete(): boolean {
+        return this.answerStatusData.isPuzzle8Complete;
+    }
+
+    public setPuzzle8Complete() {
+        this.answerStatusData.isPuzzle8Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle9Complete(): boolean {
+        return this.answerStatusData.isPuzzle9Complete;
+    }
+
+    public setPuzzle9Complete() {
+        this.answerStatusData.isPuzzle9Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle10Complete(): boolean {
+        return this.answerStatusData.isPuzzle10Complete;
+    }
+
+    public setPuzzle10Complete() {
+        this.answerStatusData.isPuzzle10Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle11Complete(): boolean {
+        return this.answerStatusData.isPuzzle11Complete;
+    }
+
+    public setPuzzle11Complete() {
+        this.answerStatusData.isPuzzle11Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle12Complete(): boolean {
+        return this.answerStatusData.isPuzzle12Complete;
+    }
+
+    public setPuzzle12Complete() {
+        this.answerStatusData.isPuzzle12Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle13Complete(): boolean {
+        return this.answerStatusData.isPuzzle13Complete;
+    }
+
+    public setPuzzle13Complete() {
+        this.answerStatusData.isPuzzle13Complete = true;
+        this.storeAnswerStatusData();
+    }
+
+    public get getIsPuzzle14Complete(): boolean {
+        return this.answerStatusData.isPuzzle14Complete;
+    }
+
+    public setPuzzle14Complete() {
+        this.answerStatusData.isPuzzle14Complete = true;
+        this.storeAnswerStatusData();
+    }
+
     public get getIsComplete() {
         return this.answerStatusData.isPuzzle1Complete && this.answerStatusData.isPuzzle2Complete && this.answerStatusData.isPuzzle3Complete;
     }
@@ -65,7 +164,18 @@ export class AnswerStatus implements OnInit {
             isIntroComplete: false,
             isPuzzle1Complete: false,
             isPuzzle2Complete: false,
-            isPuzzle3Complete: false
+            isPuzzle3Complete: false,
+            isPuzzle4Complete: false,
+            isPuzzle5Complete: false,
+            isPuzzle6Complete: false,
+            isPuzzle7Complete: false,
+            isPuzzle8Complete: false,
+            isPuzzle9Complete: false,
+            isPuzzle10Complete: false,
+            isPuzzle11Complete: false,
+            isPuzzle12Complete: false,
+            isPuzzle13Complete: false,
+            isPuzzle14Complete: false,
         };
         this.storeAnswerStatusData();
     }

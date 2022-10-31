@@ -42,6 +42,72 @@
           (correctAnswerProvided)="handlePuzzle3Result()"
           (close)="showContents()"></app-puzzle3>
       </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle4Permitted && visibilityStatus.getIsPuzzle4Visible">
+        <app-puzzle4
+          [isComplete]="answerStatus.getIsPuzzle4Complete"        
+          (correctAnswerProvided)="handlePuzzle4Result()"
+          (close)="showContents()"></app-puzzle4>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle5Permitted && visibilityStatus.getIsPuzzle5Visible">
+        <app-puzzle5
+          [isComplete]="answerStatus.getIsPuzzle5Complete"        
+          (correctAnswerProvided)="handlePuzzle5Result()"
+          (close)="showContents()"></app-puzzle5>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle6Permitted && visibilityStatus.getIsPuzzle6Visible">
+        <app-puzzle6
+          [isComplete]="answerStatus.getIsPuzzle6Complete"        
+          (correctAnswerProvided)="handlePuzzle6Result()"
+          (close)="showContents()"></app-puzzle6>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle7Permitted && visibilityStatus.getIsPuzzle7Visible">
+        <app-puzzle7
+          [isComplete]="answerStatus.getIsPuzzle7Complete"        
+          (correctAnswerProvided)="handlePuzzle7Result()"
+          (close)="showContents()"></app-puzzle7>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle8Permitted && visibilityStatus.getIsPuzzle8Visible">
+        <app-puzzle8
+          [isComplete]="answerStatus.getIsPuzzle8Complete"        
+          (correctAnswerProvided)="handlePuzzle8Result()"
+          (close)="showContents()"></app-puzzle8>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle9Permitted && visibilityStatus.getIsPuzzle9Visible">
+        <app-puzzle9
+          [isComplete]="answerStatus.getIsPuzzle9Complete"        
+          (correctAnswerProvided)="handlePuzzle9Result()"
+          (close)="showContents()"></app-puzzle9>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle10Permitted && visibilityStatus.getIsPuzzle10Visible">
+        <app-puzzle10
+          [isComplete]="answerStatus.getIsPuzzle10Complete"        
+          (correctAnswerProvided)="handlePuzzle10Result()"
+          (close)="showContents()"></app-puzzle10>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle11Permitted && visibilityStatus.getIsPuzzle11Visible">
+        <app-puzzle11
+          [isComplete]="answerStatus.getIsPuzzle11Complete"        
+          (correctAnswerProvided)="handlePuzzle11Result()"
+          (close)="showContents()"></app-puzzle11>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle12Permitted && visibilityStatus.getIsPuzzle12Visible">
+        <app-puzzle12
+          [isComplete]="answerStatus.getIsPuzzle12Complete"        
+          (correctAnswerProvided)="handlePuzzle12Result()"
+          (close)="showContents()"></app-puzzle12>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle13Permitted && visibilityStatus.getIsPuzzle13Visible">
+        <app-puzzle13
+          [isComplete]="answerStatus.getIsPuzzle13Complete"        
+          (correctAnswerProvided)="handlePuzzle13Result()"
+          (close)="showContents()"></app-puzzle13>
+      </div>
+      <div *ngIf="permissionsStatus.getIsPuzzle14Permitted && visibilityStatus.getIsPuzzle14Visible">
+        <app-puzzle14
+          [isComplete]="answerStatus.getIsPuzzle14Complete"        
+          (correctAnswerProvided)="handlePuzzle14Result()"
+          (close)="showContents()"></app-puzzle14>
+      </div>
       <div *ngIf="isComplete">
         <app-complete></app-complete>
       </div>

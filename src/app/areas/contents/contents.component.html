@@ -6,29 +6,121 @@
     <div *ngIf="permissionsStatus.getIsIntroPermitted" class="tile-selectable" (click)="selectIntro()">
         <app-tile
             [title]="'Intro'"
-            [description]="'Begin adventures in space and time'"
+            [number]="0"
+            [description]="'Begin adventures in space and time!'"
             [complete]="answerStatus.getIsIntroComplete">
         </app-tile>
     </div>
     <div *ngIf="permissionsStatus.getIsPuzzle1Permitted" class="tile-selectable" (click)="selectPuzzle1()">
         <app-tile
             [title]="'Hartnell'"
-            [description]="'Go forward in your beliefs'"
+            [number]="1"
+            [description]="'Go forward in your beliefs.'"
             [complete]="answerStatus.getIsPuzzle1Complete">
         </app-tile>
     </div>
     <div *ngIf="permissionsStatus.getIsPuzzle2Permitted" class="tile-selectable" (click)="selectPuzzle2()">
         <app-tile
             [title]="'Troughton'"
-            [description]="'Nobody in the universe can do what we\'re doing'" 
+            [number]="2"
+            [description]="'Nobody in the universe can do what we\'re doing!'" 
             [complete]="answerStatus.getIsPuzzle2Complete">
         </app-tile>
     </div>
     <div *ngIf="permissionsStatus.getIsPuzzle3Permitted" class="tile-selectable" (click)="selectPuzzle3()">
         <app-tile
             [title]="'Pertwee'"
+            [number]="3"
             [description]="'While there\'s life, there\'s...'"
             [complete]="answerStatus.getIsPuzzle3Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle4Permitted" class="tile-selectable" (click)="selectPuzzle4()">
+        <app-tile
+            [title]="'Baker'"
+            [number]="4"
+            [description]="'Have a jelly baby.'"
+            [complete]="answerStatus.getIsPuzzle4Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle5Permitted" class="tile-selectable" (click)="selectPuzzle5()">
+        <app-tile
+            [title]="'Davison'"
+            [number]="5"
+            [description]="'I\'m definitely not the man I was. Thank goodness!'"
+            [complete]="answerStatus.getIsPuzzle5Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle6Permitted" class="tile-selectable" (click)="selectPuzzle6()">
+        <app-tile
+            [title]="'Baker'"
+            [number]="6"
+            [description]="'What\'s the use of a good quotation if you can\'t change it?'"
+            [complete]="answerStatus.getIsPuzzle6Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle7Permitted" class="tile-selectable" (click)="selectPuzzle7()">
+        <app-tile
+            [title]="'McCoy'"
+            [number]="7"
+            [description]="'Anybody remotely interesting is mad in some way or another.'"
+            [complete]="answerStatus.getIsPuzzle7Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle8Permitted" class="tile-selectable" (click)="selectPuzzle8()">
+        <app-tile
+            [title]="'McGann'"
+            [number]="8"
+            [description]="'I was once a man with a masterplan.'"
+            [complete]="answerStatus.getIsPuzzle8Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle9Permitted" class="tile-selectable" (click)="selectPuzzle9()">
+        <app-tile
+            [title]="'Eccleston'"
+            [number]="9"
+            [description]="'You were fantastic. And you know what? So was I!'"
+            [complete]="answerStatus.getIsPuzzle9Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle10Permitted" class="tile-selectable" (click)="selectPuzzle10()">
+        <app-tile
+            [title]="'Tennant'"
+            [number]="10"
+            [description]="'Wibbly wobbly, timey-wimey... stuff.'"
+            [complete]="answerStatus.getIsPuzzle10Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle11Permitted" class="tile-selectable" (click)="selectPuzzle11()">
+        <app-tile
+            [title]="'Smith'"
+            [number]="11"
+            [description]="'I wear a fez now. Fezzes are cool,'"
+            [complete]="answerStatus.getIsPuzzle11Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle12Permitted" class="tile-selectable" (click)="selectPuzzle12()">
+        <app-tile
+            [title]="'Capaldi'"
+            [number]="12"
+            [description]="'Never be cruel. Never be cowardly. Never fail to be kind.'"
+            [complete]="answerStatus.getIsPuzzle12Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle13Permitted" class="tile-selectable" (click)="selectPuzzle13()">
+        <app-tile
+            [title]="'Whittaker'"
+            [number]="13"
+            [description]="'When people need help, I never refuse.'"
+            [complete]="answerStatus.getIsPuzzle13Complete">
+        </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsPuzzle14Permitted" class="tile-selectable" (click)="selectPuzzle14()">
+        <app-tile
+            [title]="'Gatwa'"
+            [number]="14"
+            [description]="'Can someone tell me what\'s going on?'"
+            [complete]="answerStatus.getIsPuzzle14Complete">
         </app-tile>    
     </div>
 </div>

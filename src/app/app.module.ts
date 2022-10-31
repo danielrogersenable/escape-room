@@ -14,6 +14,17 @@ import { ContentsComponent } from './areas/contents/contents.component';
 import { TileComponent } from './shared/tile/tile.component';
 import { MenuComponent } from './areas/menu/menu.component';
 import { IntroComponent } from './areas/intro/intro.component';
+import { Puzzle4Component } from './areas/puzzle4/puzzle4.component';
+import { Puzzle5Component } from './areas/puzzle5/puzzle5.component';
+import { Puzzle6Component } from './areas/puzzle6/puzzle6.component';
+import { Puzzle7Component } from './areas/puzzle7/puzzle7.component';
+import { Puzzle8Component } from './areas/puzzle8/puzzle8.component';
+import { Puzzle9Component } from './areas/puzzle9/puzzle9.component';
+import { Puzzle10Component } from './areas/puzzle10/puzzle10.component';
+import { Puzzle11Component } from './areas/puzzle11/puzzle11.component';
+import { Puzzle12Component } from './areas/puzzle12/puzzle12.component';
+import { Puzzle13Component } from './areas/puzzle13/puzzle13.component';
+import { Puzzle14Component } from './areas/puzzle14/puzzle14.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +38,18 @@ import { IntroComponent } from './areas/intro/intro.component';
     ContentsComponent,
     TileComponent,
     MenuComponent,
-    IntroComponent
+    IntroComponent,
+    Puzzle4Component,
+    Puzzle5Component,
+    Puzzle6Component,
+    Puzzle7Component,
+    Puzzle8Component,
+    Puzzle9Component,
+    Puzzle10Component,
+    Puzzle11Component,
+    Puzzle12Component,
+    Puzzle13Component,
+    Puzzle14Component
   ],
   imports: [
     BrowserModule,

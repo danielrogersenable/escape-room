@@ -16,6 +16,9 @@ export class TileComponent implements OnInit {
   public description = '';
 
   @Input()
+  public number = 0;
+
+  @Input()
   public complete = false;
 
   ngOnInit(): void {

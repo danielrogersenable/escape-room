@@ -40,4 +40,47 @@ export class ContentsComponent implements OnInit {
     this.selectedPuzzle.emit(PageOptions.Puzzle3);
   }
 
+  public selectPuzzle4() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle4);
+  }
+
+  public selectPuzzle5() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle5);
+  }
+
+  public selectPuzzle6() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle6);
+  }
+
+  public selectPuzzle7() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle7);
+  }
+
+  public selectPuzzle8() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle8);
+  }
+
+  public selectPuzzle9() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle9);
+  }
+
+  public selectPuzzle10() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle10);
+  }
+
+  public selectPuzzle11() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle11);
+  }
+
+  public selectPuzzle12() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle12);
+  }
+
+  public selectPuzzle13() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle13);
+  }
+
+  public selectPuzzle14() {
+    this.selectedPuzzle.emit(PageOptions.Puzzle14);
+  }
 }
