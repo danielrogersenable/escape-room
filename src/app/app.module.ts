@@ -25,6 +25,7 @@ import { Puzzle11Component } from './areas/puzzle11/puzzle11.component';
 import { Puzzle12Component } from './areas/puzzle12/puzzle12.component';
 import { Puzzle13Component } from './areas/puzzle13/puzzle13.component';
 import { Puzzle14Component } from './areas/puzzle14/puzzle14.component';
+import { PortraitComponent } from './shared/portrait/portrait.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { Puzzle14Component } from './areas/puzzle14/puzzle14.component';
     Puzzle11Component,
     Puzzle12Component,
     Puzzle13Component,
-    Puzzle14Component
+    Puzzle14Component,
+    PortraitComponent
   ],
   imports: [
     BrowserModule,

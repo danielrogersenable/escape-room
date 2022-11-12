@@ -1,0 +1,33 @@
+$border-color: #b09320;
+$text-color: $border-color;
+
+
+.portrait-image-container {
+    text-align: center;
+
+}
+.portrait-image {
+    width: 150px;
+}
+
+.portrait-name {
+    font-size: 18px;
+    color: $text-color;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.portrait-title {
+    font-size: 12px;
+    color: $text-color;
+    text-align: center;
+    margin: 0;
+}
+
+.portrait-container {
+    display: inline-block;
+    width: 200px;
+    border: 8px double $border-color;
+    margin: 16px;
+    padding: 16px;
+}
