@@ -1,4 +1,26 @@
-<p>This puzzle is a placeholder. Answer "placeholder" for now to win.</p>
+<p>
+You must find your way through the maze.
+Each stage has a number and a word associated with it.
+Instructions will appear throughout the maze to tell you where to go - either left, right or forwards.
+Later instructions supersede earlier ones unless precedence is otherwise specified.
+Instructions apply for the current stage and all future ones.
+You may reset at any time.
+There are 20 stages to go through in the maze.
+You may not know immediately if you have made a wrong move.</p>
+
+<p>Room number: {{ roomNumber }}</p>
+<p>Room word: {{ roomWord }}</p>
+<p>Room instruction: {{ roomInstruction }}</p>
+
+<div *ngIf="isAtEnd">
+    <p>You're at the end!</p>
+</div>
+<div *ngIf="!isAtEnd">
+    <button (click)="left()">Left</button>
+    <button (click)="forwards()">Forwards</button>
+    <button (click)="right()">Right</button>    
+</div>
+<button (click)="reset()">Reset</button>
 
 <app-answer
     [correctAnswer]="correctAnswer"
