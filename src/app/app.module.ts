@@ -26,6 +26,7 @@ import { Puzzle12Component } from './areas/puzzle12/puzzle12.component';
 import { Puzzle13Component } from './areas/puzzle13/puzzle13.component';
 import { Puzzle14Component } from './areas/puzzle14/puzzle14.component';
 import { PortraitComponent } from './shared/portrait/portrait.component';
+import { PigeonholeComponent } from './shared/pigeonhole/pigeonhole.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { PortraitComponent } from './shared/portrait/portrait.component';
     Puzzle12Component,
     Puzzle13Component,
     Puzzle14Component,
-    PortraitComponent
+    PortraitComponent,
+    PigeonholeComponent
   ],
   imports: [
     BrowserModule,

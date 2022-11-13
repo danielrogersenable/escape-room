@@ -1,0 +1,32 @@
+$pigeonhole-border: #89625A;
+$pigeonhole-background: #897A5A;
+$pigeonhole-text: #E5E74E;
+
+.pigeonhole {
+    width: 8rem;
+    height: 8rem;
+    display: inline-block;
+    background-color: $pigeonhole-background;
+    border: 8px solid $pigeonhole-border;
+    text-align: center;
+}
+
+.pigeonhole-sign {
+    background-color: $pigeonhole-border;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.pigeonhole-number {
+    font-size: 10px;
+    color: $pigeonhole-text;
+    margin: 0;
+}
+
+.pigeonhole-letter {
+    font-size: 14px;
+    color: $pigeonhole-text;
+    margin: 0;
+}
