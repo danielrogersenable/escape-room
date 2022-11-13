@@ -95,7 +95,7 @@
         <app-tile
             [title]="'Smith'"
             [number]="11"
-            [description]="'I wear a fez now. Fezzes are cool,'"
+            [description]="'I wear a fez now. Fezzes are cool.'"
             [complete]="answerStatus.getIsPuzzle11Complete">
         </app-tile>    
     </div>
@@ -122,5 +122,13 @@
             [description]="'Can someone tell me what\'s going on?'"
             [complete]="answerStatus.getIsPuzzle14Complete">
         </app-tile>    
+    </div>
+    <div *ngIf="permissionsStatus.getIsConclusionPermitted" class="tile-selectable" (click)="selectConclusion()">
+        <app-tile
+            [title]="'Conclusion'"
+            [number]="15"
+            [description]="'The grand finale'"
+            [complete]="true">
+        </app-tile>
     </div>
 </div>

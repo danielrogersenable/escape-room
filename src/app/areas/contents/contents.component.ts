@@ -83,4 +83,8 @@ export class ContentsComponent implements OnInit {
   public selectPuzzle14() {
     this.selectedPuzzle.emit(PageOptions.Puzzle14);
   }
+
+  public selectConclusion() {
+    this.selectedPuzzle.emit(PageOptions.Conclusion);
+  }
 }

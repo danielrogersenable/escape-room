@@ -108,7 +108,7 @@
           (correctAnswerProvided)="handlePuzzle14Result()"
           (close)="showContents()"></app-puzzle14>
       </div>
-      <div *ngIf="isComplete">
+      <div *ngIf="permissionsStatus.getIsConclusionPermitted && visibilityStatus.getIsConclusionVisible">
         <app-complete></app-complete>
       </div>
     </div>

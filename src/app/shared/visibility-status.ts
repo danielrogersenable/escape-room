@@ -44,6 +44,7 @@ export class VisibilityStatus implements OnInit {
             isPuzzle12Visible: false,
             isPuzzle13Visible: false,
             isPuzzle14Visible: false,
+            isConclusionVisible: false,
         };
         this.storeVisibilityStatusData();
     }
@@ -205,6 +206,16 @@ export class VisibilityStatus implements OnInit {
     public showPuzzle14() {
         this.deselectEverything();
         this.visibilityStatusData.isPuzzle14Visible = true;
+        this.storeVisibilityStatusData();
+    }
+
+    public get getIsConclusionVisible(): boolean {
+        return this.visibilityStatusData.isConclusionVisible;
+    }
+
+    public showConclusion() {
+        this.deselectEverything();
+        this.visibilityStatusData.isConclusionVisible = true;
         this.storeVisibilityStatusData();
     }
 

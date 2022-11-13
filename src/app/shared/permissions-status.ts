@@ -44,6 +44,7 @@ export class PermissionsStatus implements OnInit {
             isPuzzle12Permitted: false,
             isPuzzle13Permitted: false,
             isPuzzle14Permitted: false,
+            isConclusionPermitted: false,
         };
         this.storePermissionsStatusData();
     }
@@ -120,6 +121,10 @@ export class PermissionsStatus implements OnInit {
         return this.permissionsStatusData.isPuzzle14Permitted;
     }
 
+    public get getIsConclusionPermitted(): boolean {
+        return this.permissionsStatusData.isConclusionPermitted;
+    }
+
     public completeValidation() {
         this.permissionsStatusData.isSignInPermitted = false;
         this.permissionsStatusData.isSignOutPermitted = true;
@@ -188,6 +193,10 @@ export class PermissionsStatus implements OnInit {
     }
 
     public setPuzzle14Complete() {
+    }
+
+    public setAllPuzzlesComplete() {
+        this.permitConclusion();
     }
 
     private permitIntro() {
@@ -267,6 +276,11 @@ export class PermissionsStatus implements OnInit {
 
     private permitPuzzle14() {
         this.permissionsStatusData.isPuzzle14Permitted = true;
+        this.storePermissionsStatusData();
+    }
+
+    private permitConclusion() {
+        this.permissionsStatusData.isConclusionPermitted = true;
         this.storePermissionsStatusData();
     }
 

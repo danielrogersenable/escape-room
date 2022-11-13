@@ -17,4 +17,5 @@ export class PermissionsStatusData {
     public isPuzzle12Permitted: boolean = false;
     public isPuzzle13Permitted: boolean = false;
     public isPuzzle14Permitted: boolean = false;
+    public isConclusionPermitted: boolean = false;
 }

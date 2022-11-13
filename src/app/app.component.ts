@@ -86,7 +86,10 @@ export class AppComponent implements OnInit {
       case PageOptions.Puzzle14:
         this.visibilityStatus.showPuzzle14();
         break;
-    }
+      case PageOptions.Conclusion:
+        this.visibilityStatus.showConclusion();
+        break;
+      }
   }
 
   public deselectEverything() {
@@ -111,84 +114,98 @@ export class AppComponent implements OnInit {
   public handlePuzzle1Result() {
     this.answerStatus.setPuzzle1Complete();
     this.permissionsStatus.setPuzzle1Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle2Result() {
     this.answerStatus.setPuzzle2Complete();
     this.permissionsStatus.setPuzzle2Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle3Result() {
     this.answerStatus.setPuzzle3Complete();
     this.permissionsStatus.setPuzzle3Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle4Result() {
     this.answerStatus.setPuzzle4Complete();
     this.permissionsStatus.setPuzzle4Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle5Result() {
     this.answerStatus.setPuzzle5Complete();
     this.permissionsStatus.setPuzzle5Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle6Result() {
     this.answerStatus.setPuzzle6Complete();
     this.permissionsStatus.setPuzzle6Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle7Result() {
     this.answerStatus.setPuzzle7Complete();
     this.permissionsStatus.setPuzzle7Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle8Result() {
     this.answerStatus.setPuzzle8Complete();
     this.permissionsStatus.setPuzzle8Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle9Result() {
     this.answerStatus.setPuzzle9Complete();
     this.permissionsStatus.setPuzzle9Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle10Result() {
     this.answerStatus.setPuzzle10Complete();
     this.permissionsStatus.setPuzzle10Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle11Result() {
     this.answerStatus.setPuzzle11Complete();
     this.permissionsStatus.setPuzzle11Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle12Result() {
     this.answerStatus.setPuzzle12Complete();
     this.permissionsStatus.setPuzzle12Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle13Result() {
     this.answerStatus.setPuzzle13Complete();
     this.permissionsStatus.setPuzzle13Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
   public handlePuzzle14Result() {
     this.answerStatus.setPuzzle14Complete();
     this.permissionsStatus.setPuzzle14Complete();
+    this.setConclusionIfAllComplete();
     this.updateStorage();
   }
 
@@ -211,6 +228,12 @@ export class AppComponent implements OnInit {
   public setIsNotValidated() {
     this.isValidated = false;
     this.updateStorage();
+  }
+
+  public setConclusionIfAllComplete() {
+    if (this.answerStatus.getIsComplete) {
+      this.permissionsStatus.setAllPuzzlesComplete();
+    }
   }
 
   private loadFromStorage(): void {

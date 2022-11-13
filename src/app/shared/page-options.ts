@@ -15,4 +15,5 @@ export enum PageOptions {
     Puzzle12,
     Puzzle13,
     Puzzle14,
+    Conclusion,
 }

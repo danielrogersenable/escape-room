@@ -47,6 +47,9 @@
     <li *ngIf="permissionsStatus.getIsPuzzle14Permitted">
         <a (click)="showPuzzle14()">14. Gatwa</a>
     </li>
+    <li *ngIf="permissionsStatus.getIsConclusionPermitted">
+        <a (click)="showConclusion()">Conclusion</a>
+    </li>
     <li *ngIf="permissionsStatus.getIsSignInPermitted">
         <a (click)="showSignIn()">Sign in</a>
     </li>

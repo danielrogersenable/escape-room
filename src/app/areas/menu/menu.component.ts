@@ -91,6 +91,10 @@ export class MenuComponent implements OnInit {
     this.visibilityStatus.showPuzzle14();
   }
 
+  public showConclusion() {
+    this.visibilityStatus.showConclusion();
+  }
+
   public showSignIn() {
   }
 

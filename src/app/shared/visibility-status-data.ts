@@ -14,5 +14,6 @@ export class VisibilityStatusData {
     public isPuzzle11Visible: boolean = false;    
     public isPuzzle12Visible: boolean = false;    
     public isPuzzle13Visible: boolean = false;    
-    public isPuzzle14Visible: boolean = false;    
+    public isPuzzle14Visible: boolean = false;
+    public isConclusionVisible: boolean = false;   
 }
