@@ -41,9 +41,11 @@ export class AnswerComponent implements OnInit {
   public displayError = false;
 
   public onSubmit(): void {
-    const submittedValue = String(this.answer.value).toLowerCase();
+    const submittedValue = this.formatString(String(this.answer.value));
 
-    const successfulValidation = submittedValue === this.correctAnswer.toLowerCase();
+    console.log(submittedValue);
+
+    const successfulValidation = submittedValue === this.formatString(this.correctAnswer);
 
     if (successfulValidation) {
       this.displayError = false;
@@ -51,5 +53,13 @@ export class AnswerComponent implements OnInit {
     } else {
       this.displayError = true;
     }
+  }
+
+  private formatString(inputString: string): string {
+    if (!inputString) {
+      return inputString;
+    }
+
+    return inputString.replace(/ /g,'').toLowerCase();
   }
 }
