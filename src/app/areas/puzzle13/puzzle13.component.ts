@@ -52,12 +52,17 @@ export class Puzzle13Component implements OnInit {
       }
     }
 
-    this.lightArray[0][1] = true;
+    this.lightArray[0][0] = true;
+    this.lightArray[1][0] = true;
+    this.lightArray[2][0] = true;
+    this.lightArray[3][0] = true;
+    this.lightArray[4][0] = true;
+
     this.lightArray[0][3] = true;
-    this.lightArray[1][1] = true;
-    this.lightArray[2][3] = true;
-    this.lightArray[3][4] = true;
-    this.lightArray[4][4] = true;
+    this.lightArray[1][2] = true;
+    this.lightArray[2][1] = true;
+    this.lightArray[3][2] = true;
+    this.lightArray[4][3] = true;
   }
 
   public get areAllLightsOn(): boolean {
