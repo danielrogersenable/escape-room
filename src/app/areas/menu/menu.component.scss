@@ -5,24 +5,30 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
-    li {
-        padding-top: 4px;
-        padding-bottom: 4px;
-        margin-bottom: 4px;
-        margin-top: 4px;
-        padding-left: 0;
-        background-color: $color-button-background;
-        cursor: pointer;
-        border-radius: 8px;
-        
-        a {
-            padding-left: 1rem;
-        }
+    button {
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
     }
 
-    li:hover {
-        background-color: $color-button-text;
-        color: $color-button-background;
-        border-color: $color-button-background;
-    }
+    // li {
+    //     padding-top: 4px;
+    //     padding-bottom: 4px;
+    //     margin-bottom: 4px;
+    //     margin-top: 4px;
+    //     padding-left: 0;
+    //     background-color: $color-button-background;
+    //     cursor: pointer;
+    //     border-radius: 8px;
+        
+    //     a {
+    //         padding-left: 1rem;
+    //     }
+    // }
+
+    // li:hover {
+    //     background-color: $color-button-text;
+    //     color: $color-button-background;
+    //     border-color: $color-button-background;
+    // }
 }

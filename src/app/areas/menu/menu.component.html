@@ -1,59 +1,59 @@
 <ul class="menu-panel">
     <li *ngIf="permissionsStatus.getIsContentsPermitted">
-        <a (click)="showContents()">All puzzles</a>
+        <button (click)="showContents()">All puzzles</button>
     </li>
     <li *ngIf="permissionsStatus.getIsIntroPermitted">
-        <a (click)="showIntro()">0. Intro</a>
+        <button (click)="showIntro()">0. Intro</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle1Permitted">
-        <a (click)="showPuzzle1()">1. Hartnell</a>
+        <button (click)="showPuzzle1()">1. Hartnell</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle2Permitted">
-        <a (click)="showPuzzle2()">2. Troughton</a>
+        <button (click)="showPuzzle2()">2. Troughton</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle3Permitted">
-        <a (click)="showPuzzle3()">3. Pertwee</a>
+        <button (click)="showPuzzle3()">3. Pertwee</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle4Permitted">
-        <a (click)="showPuzzle4()">4. Baker</a>
+        <button (click)="showPuzzle4()">4. Baker</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle5Permitted">
-        <a (click)="showPuzzle5()">5. Davison</a>
+        <button (click)="showPuzzle5()">5. Davison</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle6Permitted">
-        <a (click)="showPuzzle6()">6. Baker</a>
+        <button (click)="showPuzzle6()">6. Baker</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle7Permitted">
-        <a (click)="showPuzzle7()">7. McCoy</a>
+        <button (click)="showPuzzle7()">7. McCoy</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle8Permitted">
-        <a (click)="showPuzzle8()">8. McGann</a>
+        <button (click)="showPuzzle8()">8. McGann</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle9Permitted">
-        <a (click)="showPuzzle9()">9. Eccleston</a>
+        <button (click)="showPuzzle9()">9. Eccleston</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle10Permitted">
-        <a (click)="showPuzzle10()">10. Tennant</a>
+        <button (click)="showPuzzle10()">10. Tennant</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle11Permitted">
-        <a (click)="showPuzzle11()">11. Smith</a>
+        <button (click)="showPuzzle11()">11. Smith</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle12Permitted">
-        <a (click)="showPuzzle12()">12. Capaldi</a>
+        <button (click)="showPuzzle12()">12. Capaldi</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle13Permitted">
-        <a (click)="showPuzzle13()">13. Whittaker</a>
+        <button (click)="showPuzzle13()">13. Whittaker</button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle14Permitted">
-        <a (click)="showPuzzle14()">14. Gatwa</a>
+        <button (click)="showPuzzle14()">14. Gatwa</button>
     </li>
     <li *ngIf="permissionsStatus.getIsConclusionPermitted">
-        <a (click)="showConclusion()">Conclusion</a>
+        <button (click)="showConclusion()">Conclusion</button>
     </li>
     <li *ngIf="permissionsStatus.getIsSignInPermitted">
-        <a (click)="showSignIn()">Sign in</a>
+        <button (click)="showSignIn()">Sign in</button>
     </li>
     <li *ngIf="permissionsStatus.getIsSignOutPermitted">
-        <a (click)="handleSignOut()">Reset progress</a>
+        <button (click)="handleSignOut()">Reset progress</button>
     </li>
 </ul>
