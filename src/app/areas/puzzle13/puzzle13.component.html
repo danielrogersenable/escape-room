@@ -1,4 +1,17 @@
-<p>This puzzle is a placeholder. Answer "placeholder" for now to win.</p>
+<p>Turn all the lights on (make them purple)! Clicking on a light will toggle the status of that light and adjacent lights.</p>
+
+<table>
+    <tr *ngFor="let lightArrayItem of lightArray; let x = index">
+        <td *ngFor="let light of lightArrayItem; let y = index" (click)="toggle(x,y)">
+            <div class="light-circle" [class.on]="light"></div>
+        </td>
+    </tr>
+</table>
+
+<p *ngIf="areAllLightsOn">
+    Congratulations! With all the lights on, you see the word "blueprint" on the wall
+    (even with {{ (maxX + 1) * (maxY + 1) - 1}} lights you couldn't quite see it).
+</p>
 
 <app-answer
     [correctAnswer]="correctAnswer"
