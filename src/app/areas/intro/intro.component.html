@@ -4,10 +4,12 @@
     <li>Googling things is allowed, and indeed encouraged/expected!</li>
     <li>There's nothing hidden in HTML, URLs etc - everything you need will be visible on a page.</li>
     <li>Some puzzles will require parts given as rewards from earlier puzzles.</li>
+    <li>Answers are not case sensitive, and spaces are ignored.</li>
+    <li>The "reset progress" option will remove all submitted answers and restarts the room. Only use this if you want to start again from the beginning.</li>
 </ul>
 <p>Make sense? Type "ready" if you're ready to go!</p>
 <app-answer
-    [correctAnswer]="correctAnswer"
+    [correctAnswers]="correctAnswers"
     [errorMessage]="errorMessage"
     [isComplete]="isComplete"
     (onComplete)="handleCorrectAnswerProvided()"

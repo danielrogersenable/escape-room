@@ -26,7 +26,7 @@ export class Puzzle6Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'Ontario';
+  public correctAnswers = ['Lake Ontario', 'Ontario'];
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleCorrectAnswerProvided(): void {

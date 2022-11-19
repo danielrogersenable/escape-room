@@ -1,7 +1,7 @@
 <ng-container *ngIf="isComplete;then completeMessage else incompleteMessage"></ng-container>
 <ng-template #completeMessage>
     <div class="messages-container">
-        Nice work, you've got this one right! The correct answer was: '{{ correctAnswer }}'.
+        Nice work, you've got this one right! The correct answer was: '{{ correctAnswers[0] }}'.
     </div>
 </ng-template>
 <ng-template #incompleteMessage>

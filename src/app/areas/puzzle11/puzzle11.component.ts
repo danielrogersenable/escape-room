@@ -26,7 +26,7 @@ export class Puzzle11Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'Paul Jones, Lord of Bath';
+  public correctAnswers = ['Paul Jones, Lord of Bath'];
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleCorrectAnswerProvided(): void {

@@ -74,7 +74,7 @@ just a framing device for the puzzle.
 
 <p>Submit your answer as a comma separated list of person, weapon and place. So if you think 
 the murderer was the waiter with a pickaxe in the garden, then a) you've got a really left-field solution to the question;
-but more importantly b) you'd submit "waiter,pickaxe,garden" (with no spaces)</p>
+but more importantly b) you'd submit "waiter, pickaxe, garden"</p>
 
 <div *ngIf="isComplete">
     <p>
@@ -86,7 +86,7 @@ but more importantly b) you'd submit "waiter,pickaxe,garden" (with no spaces)</p
 </div>
 
 <app-answer
-    [correctAnswer]="correctAnswer"
+    [correctAnswers]="correctAnswers"
     [errorMessage]="errorMessage"
     [isComplete]="isComplete"
     (onComplete)="handleCorrectAnswerProvided()"

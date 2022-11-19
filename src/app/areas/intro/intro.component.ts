@@ -26,7 +26,7 @@ export class IntroComponent implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'ready';
+  public correctAnswers = ['ready'];
   public errorMessage = 'The answer here is just the word "ready". This wasn\'t intended to be a difficult puzzle!';
 
   public handleCorrectAnswerProvided(): void {

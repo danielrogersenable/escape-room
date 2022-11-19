@@ -15,7 +15,7 @@ export class AnswerComponent implements OnInit {
   }
 
   @Input()
-  public correctAnswer: string = '';
+  public correctAnswers: string[] = [];
 
   @Input()
   public errorMessage: string = 'That answer was not correct. Please try again.'
@@ -43,9 +43,9 @@ export class AnswerComponent implements OnInit {
   public onSubmit(): void {
     const submittedValue = this.formatString(String(this.answer.value));
 
-    console.log(submittedValue);
+    const correctAnswers = this.correctAnswers.map(o => this.formatString(o));
 
-    const successfulValidation = submittedValue === this.formatString(this.correctAnswer);
+    const successfulValidation = correctAnswers.indexOf(submittedValue) > -1 ;
 
     if (successfulValidation) {
       this.displayError = false;

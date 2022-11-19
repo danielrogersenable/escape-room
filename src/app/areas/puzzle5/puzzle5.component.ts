@@ -27,7 +27,7 @@ export class Puzzle5Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'blueprint';
+  public correctAnswers = ['blueprint'];
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleCorrectAnswerProvided(): void {
