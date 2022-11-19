@@ -27,6 +27,8 @@ import { Puzzle13Component } from './areas/puzzle13/puzzle13.component';
 import { Puzzle14Component } from './areas/puzzle14/puzzle14.component';
 import { PortraitComponent } from './shared/portrait/portrait.component';
 import { PigeonholeComponent } from './shared/pigeonhole/pigeonhole.component';
+import { JigsawComponent } from './shared/jigsaw/jigsaw.component';
+import { ScaleComponent } from './shared/scale/scale.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { PigeonholeComponent } from './shared/pigeonhole/pigeonhole.component';
     Puzzle13Component,
     Puzzle14Component,
     PortraitComponent,
-    PigeonholeComponent
+    PigeonholeComponent,
+    JigsawComponent,
+    ScaleComponent
   ],
   imports: [
     BrowserModule,

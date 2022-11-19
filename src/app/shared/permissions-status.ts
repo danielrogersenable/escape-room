@@ -133,70 +133,141 @@ export class PermissionsStatus implements OnInit {
     }
     
     public setIntroComplete() {
-        this.permitPuzzle1();
-        this.permitPuzzle2();
-        this.permitPuzzle3();
+        this.permitNextUnpermittedPuzzle();
+        this.permitNextUnpermittedPuzzle();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle1Complete() {
-        this.permitPuzzle4();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle2Complete() {
-        this.permitPuzzle4();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle3Complete() {
-        this.permitPuzzle4();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle4Complete() {
-        this.permitPuzzle5();
-        this.permitPuzzle6();
-        this.permitPuzzle7();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle5Complete() {
-        this.permitPuzzle8();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle6Complete() {
-        this.permitPuzzle8();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle7Complete() {
-        this.permitPuzzle8();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle8Complete() {
-        this.permitPuzzle9();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle9Complete() {
-        this.permitPuzzle10();
-        this.permitPuzzle11();
-        this.permitPuzzle12();
-        this.permitPuzzle13();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle10Complete() {
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle11Complete() {
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle12Complete() {
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle13Complete() {
-        this.permitPuzzle14();
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setPuzzle14Complete() {
+        this.permitNextUnpermittedPuzzle();
     }
 
     public setAllPuzzlesComplete() {
         this.permitConclusion();
+    }
+
+    private permitNextUnpermittedPuzzle() {
+        if (!this.getIsPuzzle1Permitted) {
+            this.permitPuzzle1();
+            return;
+        }
+
+        if (!this.getIsPuzzle2Permitted) {
+            this.permitPuzzle2();
+            return;
+        }
+
+        if (!this.getIsPuzzle3Permitted) {
+            this.permitPuzzle3();
+            return;
+        }
+
+        if (!this.getIsPuzzle4Permitted) {
+            this.permitPuzzle4();
+            return;
+        }
+
+        if (!this.getIsPuzzle5Permitted) {
+            this.permitPuzzle5();
+            return;
+        }
+
+        if (!this.getIsPuzzle6Permitted) {
+            this.permitPuzzle6();
+            return;
+        }
+
+        if (!this.getIsPuzzle7Permitted) {
+            this.permitPuzzle7();
+            return;
+        }
+
+        if (!this.getIsPuzzle8Permitted) {
+            this.permitPuzzle8();
+            return;
+        }
+
+        if (!this.getIsPuzzle9Permitted) {
+            this.permitPuzzle9();
+            return;
+        }
+
+        if (!this.getIsPuzzle10Permitted) {
+            this.permitPuzzle10();
+            return;
+        }
+
+        if (!this.getIsPuzzle11Permitted) {
+            this.permitPuzzle11();
+            return;
+        }
+
+        if (!this.getIsPuzzle12Permitted) {
+            this.permitPuzzle12();
+            return;
+        }
+
+        if (!this.getIsPuzzle13Permitted) {
+            this.permitPuzzle13();
+            return;
+        }
+
+        if (!this.getIsPuzzle14Permitted) {
+            this.permitPuzzle14();
+            return;
+        }
     }
 
     private permitIntro() {
