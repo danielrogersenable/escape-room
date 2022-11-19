@@ -1,41 +1,7 @@
-<p>
-You must find your way through the maze. The correct path through the maze will take you through 20 rooms; the word in room 20
-is the answer you need.
-</p>
-<p>
-Each room has a number and a word associated with it. Each room will also contain an instruction, which will help you determine whether to
-go left, right or forwards into the next room.
-Unless otherwise specified, instructions for a room apply for the current room and all future rooms.
-Later instructions supersede earlier ones unless precedence is otherwise specified.
-Instructions which refer to the "current room" or "previous room" apply to all subsequent rooms; e.g. if the instruction in room 2 
-says "If the current word is RELAY then go left", and the word for room 13 was "RELAY", then you would go left
-(unless a later instruction superseded this).
-</p>
-<p>
-Rooms 10 and 20 will tell you if you've made a wrong move to date, but won't tell you when you made the mistake.
-You may reset at any time, which will take you back to the first room.
-</p>
-<p>Enter the maze below...</p>
+<p>As you enter the room, mysterious symbols fly across the room from all directions and appear scattered in front of you.
+However, you could swear that one of the icons was there already...</p>
 
-<div class="maze-container">
-    <div class="sign-container">
-        <p class="room-number">Room number: {{ roomNumber }}</p>
-        <p class="room-word">Room word: {{ roomWord }}</p>    
-    </div>
-    <div class="instruction-container">
-        <p class="room-instruction">Room instruction: {{ roomInstruction }}</p>    
-    </div>
-</div>
-
-<div *ngIf="isAtEnd">
-    <p>You're at the end!</p>
-</div>
-<div *ngIf="!isAtEnd">
-    <button class="direction-button" (click)="left()">Left</button>
-    <button class="direction-button" (click)="forwards()">Forwards</button>
-    <button class="direction-button" (click)="right()">Right</button>    
-</div>
-<button class="reset-button" (click)="reset()">Reset</button>
+<img src="./../../../assets/checkout.gif" />
 
 <app-answer
     [correctAnswer]="correctAnswer"

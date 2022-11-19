@@ -15,9 +15,9 @@ export class Puzzle1Component implements OnInit {
 
   @Input()
   public isComplete = false;
-
+  
   @Output()
-  public correctAnswerProvided = new EventEmitter(); 
+  correctAnswerProvided = new EventEmitter();
 
   @Output()
   public close = new EventEmitter(); 
@@ -26,11 +26,11 @@ export class Puzzle1Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'decade';
+  public correctAnswer = 'impossible';
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleCorrectAnswerProvided(): void {
-    this.correctAnswerProvided.emit(); 
+    this.correctAnswerProvided.emit();
     this.close.emit();
   }
 

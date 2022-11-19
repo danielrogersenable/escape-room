@@ -1,0 +1,72 @@
+@import '/src/_variables.scss';
+
+$pigeonhole-background: #897A5A;
+
+$maze-background: $color-secondary;
+$maze-border: $color-secondary;
+
+$sign-background: $color-button-text;
+$sign-text: $color-secondary;
+
+$instruction-background: $color-button-text;
+$instruction-text: $color-secondary;
+
+.direction-button, .reset-button {
+    margin-left: 4px;
+    margin-right: 4px;
+    width: 5rem;
+}
+
+.reset-button {
+    margin-top: 8px;
+}
+
+.maze-container {
+    position: relative;
+    width: 600px;
+    height: 10rem;
+    background-color: $maze-background;
+    border: 8px solid $maze-border;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sign-container {
+    background-color: $sign-background;
+    width: 10rem;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.room-number {
+    font-size: 14px;
+    color: $sign-text;
+    margin: 0;
+    margin-top: 8px;
+}
+
+.room-word {
+    font-size: 14px;
+    color: $sign-text;
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.instruction-container {
+    display: block;
+    border-radius: 4px;
+    background-color: $instruction-background;
+    position: relative;
+    top: 2rem;
+    height: 3rem;
+}
+
+.room-instruction {
+    color: $instruction-text;
+    padding-top: 4px;
+}
+

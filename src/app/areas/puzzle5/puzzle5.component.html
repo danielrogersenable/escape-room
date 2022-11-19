@@ -1,24 +1,17 @@
-<p>This one might be too hard as it stands; there are ways to phrase it to make it easier</p>
-<p>You find a pile of 14 cards on the floor with words on. Although they are out of order, you eventually realise that there is one card missing.</p>
-<p>The words are:</p>
-<ul>
-    <li>Monk</li>
-    <li>Religious</li>
-    <li>Chess</li>
-    <li>Djibouti</li>
-    <li>Bishop</li>
-    <li>Turkey</li>
-    <li>Psych</li>
-    <li>Bird</li>
-    <li>TV</li>
-    <li>Country</li>
-    <li>Raven</li>
-    <li>Silent</li>
-    <li>Knight</li>
-    <li>Vatican</li>
-</ul>
+<p>Turn all the lights on (make them purple)! Clicking on a light will toggle the status of that light and adjacent lights.</p>
 
-What word should go on the missing card?
+<table>
+    <tr *ngFor="let lightArrayItem of lightArray; let x = index">
+        <td *ngFor="let light of lightArrayItem; let y = index" (click)="toggle(x,y)">
+            <div class="light-circle" [class.on]="light"></div>
+        </td>
+    </tr>
+</table>
+
+<p *ngIf="areAllLightsOn">
+    Congratulations! With all the lights on, you see the word "blueprint" on the wall
+    (even with {{ (maxX + 1) * (maxY + 1) - 1}} lights you couldn't quite see it).
+</p>
 
 <app-answer
     [correctAnswer]="correctAnswer"

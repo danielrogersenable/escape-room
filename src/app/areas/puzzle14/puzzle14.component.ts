@@ -17,7 +17,7 @@ export class Puzzle14Component implements OnInit {
   public isComplete = false;
   
   @Output()
-  correctAnswerProvided = new EventEmitter();
+  correctAnswerProvided = new EventEmitter(); 
 
   @Output()
   public close = new EventEmitter(); 
@@ -26,7 +26,7 @@ export class Puzzle14Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'lordship';
+  public correctAnswer = 'noise';
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleCorrectAnswerProvided(): void {

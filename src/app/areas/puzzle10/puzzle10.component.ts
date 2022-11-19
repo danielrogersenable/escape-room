@@ -26,11 +26,11 @@ export class Puzzle10Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'apple';
+  public correctAnswer = 'rook';
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleCorrectAnswerProvided(): void {
-    this.correctAnswerProvided.emit(); 
+    this.correctAnswerProvided.emit();
     this.close.emit();
   }
 

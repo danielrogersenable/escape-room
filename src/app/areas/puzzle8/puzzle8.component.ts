@@ -26,11 +26,11 @@ export class Puzzle8Component implements OnInit {
 
   public displayError = false;
 
-  public correctAnswer = 'Paul Jones, Lord of Bath';
+  public correctAnswer = 'maid,gun,library';
   public errorMessage = 'That wasn\'t right. Please try again.';
 
   public handleCorrectAnswerProvided(): void {
-    this.correctAnswerProvided.emit();
+    this.correctAnswerProvided.emit(); 
     this.close.emit();
   }
 

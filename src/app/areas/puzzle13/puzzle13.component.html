@@ -1,17 +1,17 @@
-<p>Turn all the lights on (make them purple)! Clicking on a light will toggle the status of that light and adjacent lights.</p>
+<p>Welcome to the word buffet!</p>
+<p>Help yourself to some letters; but make sure you still leave some words for the next visitors!</p>
+<p>And no rearranging!</p>
 
-<table>
-    <tr *ngFor="let lightArrayItem of lightArray; let x = index">
-        <td *ngFor="let light of lightArrayItem; let y = index" (click)="toggle(x,y)">
-            <div class="light-circle" [class.on]="light"></div>
-        </td>
-    </tr>
-</table>
-
-<p *ngIf="areAllLightsOn">
-    Congratulations! With all the lights on, you see the word "blueprint" on the wall
-    (even with {{ (maxX + 1) * (maxY + 1) - 1}} lights you couldn't quite see it).
-</p>
+<ol>
+<li>SLEEP</li>
+<li>CHOOSE</li>
+<li>SPROUT</li>
+<li>CROWD</li>
+<li>SHARP</li>
+<li>HEATHER</li>
+<li>POISE</li>
+<li>INSPECT</li>
+</ol>
 
 <app-answer
     [correctAnswer]="correctAnswer"

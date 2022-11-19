@@ -1,18 +1,80 @@
-<!-- Images from https://getavataaars.com/ -->
+<p>This time, you find yourself in the midst of a murder mystery! Somebody has killed the butler (just to ensure that he didn't do it).
+Your job is to identify who the murderer is, where the murder took place and what the weapon used was.</p>
 
-<p>What a lovely portrait gallery!</p>
+<p>You know the following to be true:</p>
+<ul>
+    <li>There were only seven people in the grounds at the time; the butler and the six suspects below.</li>
+    <li>The murder took place at midday.</li>
+    <li>The murderer was alone with the butler when the murder took place; there was nobody else in the location with them.</li>
+    <li>Each suspect has made two statements to the police, which are below.</li>
+    <li>The police have determined that both of the murderer's statements are lies.</li>
+    <li>The police also know that two other people, neither of whom are the murderer, were having an affair.
+        To cover it up, both people having an affair have told one truth and one lie. No other characters are having affairs.</li>
+    <li>Both statements made by the other three suspects are completely true.</li>
+</ul>
 
-<app-portrait [name]="'George Smith'" [title]="'Duke of Singapore'" [imageName]="'george-smith-duke-singapore'"></app-portrait>
-<app-portrait [name]="'Adam Jones'" [title]="'Duke of Ealing'" [imageName]="'adam-jones-duke-ealing'"></app-portrait>
-<app-portrait [name]="'Brian Brown'" [title]="'Viscount of Banbridge'" [imageName]="'brian-brown-viscount-banbridge'"></app-portrait>
-<app-portrait [name]="'Paul Smith'" [title]="'Duke of Bath'" [imageName]="'paul-smith-duke-bath'"></app-portrait>
-<app-portrait [name]="'Adam Brown'" [title]="'Lord of Singapore'" [imageName]="'adam-brown-lord-singapore'"></app-portrait>
+<p>You consider asking the police how they have such specific knowledge, but you are not able to as ultimately the police are mostly
+just a framing device for the puzzle.
+</p>
 
-<p>Looks like one of the portraits has lost its name plate.</p>
+<p>Note that a statement is a lie if it is not completely true - e.g. one of the lying characters above could say as a lie
+"I have a dog and I have a cat" and still have a cat, provided they did not have a dog. </p>
 
-<app-portrait [name]="'???'" [title]="'???'" [imageName]="'nice-try-no-hint-here'"></app-portrait>
+<p>The possible weapons are:</p>
+<ul>
+    <li>Knife</li>
+    <li>Gun</li>
+    <li>Poison</li>
+    <li>Statuette</li>
+</ul>
 
-<p>Who is this? Give your answer in the form "Joe Bloggs, Chief of London".</p>
+<p>The possible rooms are:</p>
+<ul>
+    <li>Outhouse</li>
+    <li>Conservatory</li>
+    <li>Kitchen</li>
+    <li>Library</li>
+</ul>
+
+<h3>The cook</h3>
+<ul>
+    <li>I was in the kitchen all day and nobody else came in.</li>
+    <li>The murderer was either the maid or the barber.</li>
+</ul> 
+
+<h3>The gardener</h3>
+<ul>
+    <li>The poison was unused and could not have been the murder weapon.</li>
+    <li>It was raining all day on the day of the murder.</li>
+</ul>
+
+<h3>The maid</h3>
+<ul>
+    <li>The murder weapon was either the knife or the statuette.</li>
+    <li>The barber is having an affair.</li>
+</ul>
+
+<h3>The driver</h3>
+<ul>
+    <li>The stable boy neither committed the murder nor was having an affair.</li>
+    <li>On the day of the murder I took the stable boy to the outhouse and we spent the whole day there; it was a lovely, sunny day.</li>
+</ul>
+
+<h3>The barber</h3>
+<ul>
+    <li>I was in the conservatory all day with the statuette.</li>
+    <li>Between them, the cook, gardener and driver told exactly two lies.</li>
+</ul>
+
+<h3>The stable boy</h3>
+<ul>
+    <li>The couple having the affair were both in the kitchen all day.</li>
+    <li>It was sunny all day on the day of the murder.</li>
+</ul>
+
+<p>Submit your answer as a comma separated list of person, weapon and place. So if you think 
+the murderer was the waiter with a pickaxe in the garden, then a) you've got a really left-field solution to the question;
+but more importantly b) you'd submit "waiter,pickaxe,garden" (with no spaces)</p>
 
 <app-answer
     [correctAnswer]="correctAnswer"
