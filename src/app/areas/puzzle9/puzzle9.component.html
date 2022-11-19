@@ -30,6 +30,14 @@ Piled beside them are the following eight books.
     <li>8. "Paleontology" by Terry Dactyl</li>
 </ul>
 
+<div *ngIf="isComplete">
+    <p>
+        Behind the old books is a gallery of all the people who failed to return a library book on time. You'll never find a more
+        wretched hive of scum and villainy. One face in particular looks familiar to you.
+    </p>
+    <app-portrait [name]="'Paul Smith'" [title]="'Duke of Bath'" [imageName]="'paul-smith-duke-bath'"></app-portrait>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"

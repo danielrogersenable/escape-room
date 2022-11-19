@@ -13,6 +13,13 @@
 <li>INSPECT</li>
 </ol>
 
+<div *ngIf="isComplete">
+    <p>
+        The waiter at the buffet gives you a small word in a jigsaw-themed doggy bag to take home with you.
+    </p>
+    <app-jigsaw [pieceNumber]="3"></app-jigsaw>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"
@@ -20,3 +27,4 @@
     (onComplete)="handleCorrectAnswerProvided()"
     (closeItem)="handleClose()">
 </app-answer>
+

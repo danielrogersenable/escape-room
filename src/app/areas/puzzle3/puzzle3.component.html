@@ -1,5 +1,12 @@
 <p>Tungsten holmium gold thorium oxygen rhenium deuterium molybdenum boron yttrium deuterium iodine carbon potassium?</p>
 
+<div *ngIf="isComplete">
+    <p>
+        A delicious clue!
+    </p>
+    <app-scale [scaleNumber]="4"></app-scale>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"
@@ -7,3 +14,4 @@
     (onComplete)="handleCorrectAnswerProvided()"
     (closeItem)="handleClose()">
 </app-answer>
+

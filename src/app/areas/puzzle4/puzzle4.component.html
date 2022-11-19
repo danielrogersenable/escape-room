@@ -50,6 +50,13 @@
 <p>FLVQZ</p>
 <p>Pretty sure that's not a word. Pretty sure that doesn't appear in the grid either. Strange.</p>
 
+<div *ngIf="isComplete">
+    <p>
+        What an enjoyable aearch for words. Here's another word, in a handy puzzle piece container.
+    </p>
+    <app-jigsaw [pieceNumber]="5"></app-jigsaw>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"

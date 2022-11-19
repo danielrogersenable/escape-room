@@ -76,6 +76,15 @@ just a framing device for the puzzle.
 the murderer was the waiter with a pickaxe in the garden, then a) you've got a really left-field solution to the question;
 but more importantly b) you'd submit "waiter,pickaxe,garden" (with no spaces)</p>
 
+<div *ngIf="isComplete">
+    <p>
+        "Alas!" cries the maid. "You saw through my incredibly cunning plan through the power of logic. It was indeed me!
+        But I did it for good reasons! I did it for this jigsaw piece!" She shows you the piece below. This is clearly very important to her,
+        and so when she's not looking you steal it off her. That seems like more than a fair punishment for murder.
+    </p>
+    <app-jigsaw [pieceNumber]="2"></app-jigsaw>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"

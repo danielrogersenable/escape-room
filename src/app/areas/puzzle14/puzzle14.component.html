@@ -1,12 +1,9 @@
-<p>These will also be scattered amongst a few other places. These pieces are currently unrotated - not sure whether rotating some of them makes it too hard.</p>
-<app-jigsaw [pieceNumber]="1"></app-jigsaw>
-<app-jigsaw [pieceNumber]="3"></app-jigsaw>
-<app-jigsaw [pieceNumber]="5"></app-jigsaw>
-<app-jigsaw [pieceNumber]="7"></app-jigsaw>
-<app-jigsaw [pieceNumber]="2"></app-jigsaw>
-<app-jigsaw [pieceNumber]="4"></app-jigsaw>
+<p>
+    Ah, here are the last pieces of the jigsaw! Hopefully you've found the other 7 pieces.
+</p>
+
 <app-jigsaw [pieceNumber]="6"></app-jigsaw>
-<app-jigsaw [pieceNumber]="8"></app-jigsaw>
+<app-jigsaw [pieceNumber]="7"></app-jigsaw>
 
 <app-answer
     [correctAnswer]="correctAnswer"
@@ -15,3 +12,9 @@
     (onComplete)="handleCorrectAnswerProvided()"
     (closeItem)="handleClose()">
 </app-answer>
+
+<div *ngIf="isComplete">
+    <p>
+        No special reward for you here; other than the pleasure of a puzzle well assembled.
+    </p>
+</div>

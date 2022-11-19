@@ -9,6 +9,13 @@
 </div>
 <p>What could it mean?</p>
 
+<div *ngIf="isComplete">
+    <p>
+        On the back of the piece of paper, you see the following item scrawled.
+    </p>
+    <app-scale [scaleNumber]="3"></app-scale>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"
@@ -16,3 +23,4 @@
     (onComplete)="handleCorrectAnswerProvided()"
     (closeItem)="handleClose()">
 </app-answer>
+

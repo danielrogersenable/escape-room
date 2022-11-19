@@ -37,6 +37,13 @@ You may reset at any time, which will take you back to the first room.
 </div>
 <button class="reset-button" (click)="reset()">Reset</button>
 
+<div *ngIf="isComplete">
+    <p>
+        Alongside the last word, you're treated to a nice portrait! You've earned it!
+    </p>
+    <app-portrait [name]="'Adam Jones'" [title]="'Duke of Ealing'" [imageName]="'adam-jones-duke-ealing'"></app-portrait>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"
@@ -44,3 +51,4 @@ You may reset at any time, which will take you back to the first room.
     (onComplete)="handleCorrectAnswerProvided()"
     (closeItem)="handleClose()">
 </app-answer>
+

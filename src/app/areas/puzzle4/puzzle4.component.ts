@@ -31,7 +31,6 @@ export class Puzzle4Component implements OnInit {
 
   public handleCorrectAnswerProvided(): void {
     this.correctAnswerProvided.emit();
-    this.close.emit();
   }
 
   public handleClose(): void {

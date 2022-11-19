@@ -1,5 +1,12 @@
 <img class="image-maze" src="../../../assets/maze.png" />
 
+<div *ngIf="isComplete">
+    <p>
+        Having found your way successfully through the maze, you find a panel with some symbols on at the far end.
+    </p>
+    <app-scale [scaleNumber]="2"></app-scale>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"
@@ -7,3 +14,4 @@
     (onComplete)="handleCorrectAnswerProvided()"
     (closeItem)="handleClose()">
 </app-answer>
+

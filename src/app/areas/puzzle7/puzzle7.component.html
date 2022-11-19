@@ -1,12 +1,19 @@
-<p>These will be scattered amongst a few other places, and the last image will be found above an old piano.</p>
+<p>You find yourself in an old concert hall. Above the grand piano on the stage you see an image similar to one you've seen in other places.
+    Underneath it, there is space for five more images.
+</p>
+
 <div>
     <app-scale [scaleNumber]="1"></app-scale>
-    <app-scale [scaleNumber]="2"></app-scale>
-    <app-scale [scaleNumber]="3"></app-scale>
-    <app-scale [scaleNumber]="4"></app-scale>
-    <app-scale [scaleNumber]="5"></app-scale>
-    <app-scale [scaleNumber]="6"></app-scale>
 </div>
+
+<div *ngIf="isComplete">
+    <p>
+        As you strike a joyful tune on the piano, you spot a painting on the wall that looks useful.
+        Since the room appears to be abandoned and that is apparently all the prompting you need for a spot of looting, you take it.
+    </p>
+    <app-portrait [name]="'Brian Brown'" [title]="'Viscount of Banbridge'" [imageName]="'brian-brown-viscount-banbridge'"></app-portrait>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"

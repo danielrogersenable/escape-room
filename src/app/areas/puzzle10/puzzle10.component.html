@@ -1,4 +1,3 @@
-<p>This one might be too hard as it stands; there are ways to phrase it to make it easier</p>
 <p>You find a pile of 14 cards on the floor with words on. Although they are out of order, you eventually realise that there is one card missing.</p>
 <p>The words are:</p>
 <ul>
@@ -19,6 +18,18 @@
 </ul>
 
 What word should go on the missing card?
+
+<div *ngIf="isComplete">
+    <p>
+        As you scrawl a word on the final card, you feel that you have done something immensely worthwhile.
+        You feel like this final word has given purpose to your life, and that your ancestors are looking down at you and smiling.
+    </p>
+    <p>
+        This may be because, on the wall ahead, one of them does seem to be looking down at you and smiling.
+        You believe his looking down on you is just because he's in an elevated position, but it's also possible he was just very condescending.
+    </p>
+    <app-portrait [name]="'Adam Brown'" [title]="'Lord of Singapore'" [imageName]="'adam-brown-lord-singapore'"></app-portrait>
+</div>
 
 <app-answer
     [correctAnswer]="correctAnswer"

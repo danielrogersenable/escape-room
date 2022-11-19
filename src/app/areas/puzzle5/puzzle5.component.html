@@ -13,6 +13,13 @@
     (even with {{ (maxX + 1) * (maxY + 1) - 1}} lights you couldn't quite see it).
 </p>
 
+<div *ngIf="isComplete">
+    <p>
+        The lights also illuminate the panel below.
+    </p>
+    <app-scale [scaleNumber]="6"></app-scale>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"

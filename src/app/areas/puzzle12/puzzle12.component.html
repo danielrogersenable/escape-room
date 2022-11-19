@@ -3,6 +3,14 @@ However, you could swear that one of the icons was there already...</p>
 
 <img src="./../../../assets/checkout.gif" />
 
+<div *ngIf="isComplete">
+    <p>
+        Having found the icon that was missing, you're reminded of your favourite word, which as a child you had printed on a jigsaw piece.
+        How convenient for our purposes here.
+    </p>
+    <app-jigsaw [pieceNumber]="1"></app-jigsaw>
+</div>
+
 <app-answer
     [correctAnswer]="correctAnswer"
     [errorMessage]="errorMessage"
