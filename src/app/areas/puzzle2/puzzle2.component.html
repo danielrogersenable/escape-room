@@ -1,20 +1,20 @@
 <p>
-You must find your way through the maze. The correct path through the maze will take you through 20 rooms; the word in room 20
+You must find your way through the maze. The correct path through the maze will take you through 15 rooms; the word in room 15
 is the answer you need.
 </p>
 <p>
 Each room has a number and a word associated with it. Each room will also contain an instruction, which will help you determine whether to
-go left, right or forwards into the next room.
-Unless otherwise specified, instructions for a room apply for the current room and all future rooms.
-Later instructions supersede earlier ones unless precedence is otherwise specified.
-Instructions which refer to the "current room" or "previous room" apply to all subsequent rooms; e.g. if the instruction in room 2 
-says "If the current word is RELAY then go left", and the word for room 13 was "RELAY", then you would go left
-(unless a later instruction superseded this).
-</p>
-<p>
-Rooms 10 and 20 will tell you if you've made a wrong move to date, but won't tell you when you made the mistake.
-You may reset at any time, which will take you back to the first room.
-</p>
+go left, right or forwards into the next room.</p>
+<ul>
+    <li>Unless otherwise specified, instructions for a room apply for the current room and all future rooms.</li>
+    <li>Later instructions supersede earlier ones unless precedence is otherwise specified.</li>
+    <li>Instructions which refer to the "current room" or "previous room" apply to all subsequent rooms; e.g. if the instruction in room 2 
+        says "If the current word is RELAY then go left", and the word for room 13 was "RELAY", then you would go left
+        (unless a later instruction superseded this).</li>
+    <li>Rooms 5, 10 and 15 will tell you if you've made a wrong move to date, but won't tell you when you made the mistake.
+        Wrong moves earlier than these rooms will result in random instructions until you reach one of these rooms.</li>
+    <li>You may reset at any time, which will take you back to the first room.</li>
+</ul>
 <p>Enter the maze below...</p>
 
 <div class="maze-container">

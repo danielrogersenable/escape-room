@@ -24,7 +24,7 @@ $instruction-text: $color-secondary;
 .maze-container {
     position: relative;
     width: 600px;
-    height: 10rem;
+    height: 11rem;
     background-color: $maze-background;
     border: 8px solid $maze-border;
     border-radius: 2rem;
@@ -62,7 +62,7 @@ $instruction-text: $color-secondary;
     background-color: $instruction-background;
     position: relative;
     top: 2rem;
-    height: 3rem;
+    height: 4rem;
 }
 
 .room-instruction {

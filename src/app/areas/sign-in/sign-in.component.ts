@@ -20,7 +20,7 @@ export class SignInComponent implements OnInit {
 
   public displayError = false;
 
-  public correctAnswers = ['password'];
+  public correctAnswers = ['Kennedy'];
   public errorMessage = 'That password was not correct. Please try again.';
 
   public handleValidationResponse(): void {

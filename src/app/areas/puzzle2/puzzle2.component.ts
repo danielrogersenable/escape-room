@@ -41,7 +41,7 @@ export class Puzzle2Component implements OnInit {
     this.close.emit();
   }
 
-  private _maxRoomNumber = 20;
+  private _maxRoomNumber = 15;
 
   public get isAtEnd(): boolean {
     return this._maxRoomNumber <= this.roomNumber;
@@ -92,13 +92,13 @@ export class Puzzle2Component implements OnInit {
     {
       step: 7,
       word: "FLOSS",
-      instruction: "If the word in the current room is a colour, go forwards.",
+      instruction: "If the word in the current room is a colour, go right.",
       correctDirection: Direction.Left // Steps 6, 5, 4, 3 do not apply, so step 2, so left.
     },
     {
       step: 8,
       word: "TWEET",
-      instruction: "The next time you need to go forwards, go left instead. (This only applies once)",
+      instruction: "In three rooms' time, go right; unless you would have gone right anyway if this instruction did not exist, in which case go left. This supserdes any other instructions that might apply (when deciding directions in that room only).",
       correctDirection: Direction.Left // Steps 7, 6, 5 do not apply, so step 4, so left.
     },
     {
@@ -110,65 +110,35 @@ export class Puzzle2Component implements OnInit {
     {
       step: 10,
       word: "SAGAS",
-      instruction: "In four rooms' time, go right; unless you would have gone right anyway if this instruction did not exist, in which case go left. This supserdes any other instructions that might apply (when deciding directions in that room only).",
-      correctDirection: Direction.Right // Steps 10, 9, 8(?), 7 do not apply, so 6, so right.
+      instruction: "If the current word is an anagram of a word from a previous room, go forwards.",
+      correctDirection: Direction.Right // Steps 10, 9, 8, 7 do not apply, so 6, so right.
     },
     {
       step: 11,
       word: "GREEN",
       instruction: "If the room number is a multiple of 6, then go forwards.",
-      correctDirection: Direction.Left // Steps 11, 10, 9, 8 do not apply, so 7, so forwards. Thus 8 applies, so left.
+      correctDirection: Direction.Left // Steps 11, 10, 9 do not apply, so 7, so right. Thus 8 applies, so left.
     },
     {
       step: 12,
       word: "TOAST",
       instruction: "If the current word contains the same letter twice in a row, take the direction you took three rooms before that room.",
-      correctDirection: Direction.Left // Steps 12, 11 applies, so left.
+      correctDirection: Direction.Forwards // Step 12 does not apply, so 11 applies, so forwards.
     },
     {
       step: 13,
-      word: "HARPS",
-      instruction: "If the current word begins with L, go left. If the word begins with R, go right. If the word begins with F, go forwards.",
-      correctDirection: Direction.Forwards // Steps 12, 11, 10, 9, 8x, 7, 6, 5x, 4, 3, 2x do not apply, so 1, so forwards.
+      word: "SHEER",
+      instruction: "Ignore instructions from any prime numbered rooms before this one.",
+      correctDirection: Direction.Right // Step 13 does not apply, step 12 does, so take the direction from step 10, which is right.
     },
     {
       step: 14,
-      word: "SHEER",
-      instruction: "If the current word is a compass direction, go right.",
-      correctDirection: Direction.Right // Steps 14, 13 do not apply, so 12. Three rooms before now is 11, so left. Thus step 10 overrules and we go right.
+      word: "CLOSE",
+      instruction: "If you would fall back to the instruction from room 1 here, instead of going forwards take the direction you've taken most overall so far.",
+      correctDirection: Direction.Left // Steps 13, 12, 11x, 10, 9, 8, 7x, 6, 5x, 4, 3x, 2x do not apply, so 1. Direction used most is left.
     },
     {
       step: 15,
-      word: "FLOAT",
-      instruction: "Ignore any instructions from prime numbered rooms before now.",
-      correctDirection: Direction.Forwards // Steps 15, 14, 13x, 12, 11x, 10x, 9, 8x, 7x, 6, 5x, 4, 3x, 2x do not apply, so 1, so forwards.
-    },
-    {
-      step: 16,
-      word: "SOUTH",
-      instruction: "If the current word is an animal, go forwards.",
-      correctDirection: Direction.Right // Steps 16, 15 does not apply, so 14, so right.
-    },
-    {
-      step: 17,
-      word: "KAYAK",
-      instruction: "If all the letters in the current word are in alphabetical order, go left.",
-      correctDirection: Direction.Right // Steps 17, 16, 15, 14, 13x, 12, 11x, 10x, 9, 8x, 7x do not apply, so 6, so right.
-    },
-    {
-      step: 18,
-      word: "UNDER",
-      instruction: "If the current word is an anagram of a word from a previous room, go forwards.",
-      correctDirection: Direction.Forwards // Steps 18, 17, 16, 15, 14, 13x, 12, 11x, 10x, 9, 8x, 7x, 6, 5x, 4, 3x, 2x do not apply, so 1, so forwards.
-    },
-    {
-      step: 19,
-      word: "CLOSE",
-      instruction: "If you would fall back to the instruction from room 1 here, instead of going forwards take the direction you've taken least overall so far.",
-      correctDirection: Direction.Forwards // Steps 18, 17, 16, 15, 14, 13x, 12, 11, 10, 9, 8x, 7x, 6, 5x, 4, 3x, 2x do not apply, so we fall back to 1. To date we have taken 5 forwards, 6 rights and 7 lefts, so forwards.
-    },
-    {
-      step: 20,
       word: "CRUEL",
       instruction: "Congratulations! The word above is the word you're looking for.",
       correctDirection: Direction.Forwards
@@ -222,7 +192,7 @@ export class Puzzle2Component implements OnInit {
   }
 
   private setIncorrectStepInstruction() {
-    if (this.roomNumber === 10 || this.roomNumber === 20) {
+    if (this.roomNumber === 5 || this.roomNumber === 10 || this.roomNumber === 15) {
       this.roomInstruction = 'You have gone wrong at some point before now. Resetting is highly recommended.'
       this.roomWord = 'WRONG'  
     }
