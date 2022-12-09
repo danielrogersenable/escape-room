@@ -9,6 +9,16 @@
         width: 100%;
         text-align: left;
         font-size: 14px;
+
+        &.selected {
+            background-color: $color-button-text;
+            color: $color-button-background;
+            border-color: $color-button-background;
+        }
+
+        &.completed {
+            text-decoration: line-through;
+        }
     }
 
     // li {

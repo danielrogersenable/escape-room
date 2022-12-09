@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AnswerStatus } from 'src/app/shared/answer-status';
 import { PermissionsStatus } from 'src/app/shared/permissions-status';
 import { VisibilityStatus } from 'src/app/shared/visibility-status';
 
@@ -16,6 +17,9 @@ export class MenuComponent implements OnInit {
 
   @Input()
   public visibilityStatus: VisibilityStatus;
+
+  @Input()
+  public answerStatus: AnswerStatus;
 
   @Output()
   public requestSignOut = new EventEmitter();

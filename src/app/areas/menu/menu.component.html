@@ -1,54 +1,135 @@
 <ul class="menu-panel">
     <li *ngIf="permissionsStatus.getIsContentsPermitted">
-        <button (click)="showContents()">All puzzles</button>
+        <button 
+            [class.selected]="visibilityStatus.getIsContentsVisible"
+            (click)="showContents()">
+            All puzzles
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsIntroPermitted">
-        <button (click)="showIntro()">0. Intro</button>
+        <button
+            [class.selected]="visibilityStatus.getIsIntroVisible"
+            [class.completed]="answerStatus.getIsIntroComplete"
+            (click)="showIntro()">
+            0. Intro
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle1Permitted">
-        <button (click)="showPuzzle1()">1. Hartnell</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle1Visible"
+            [class.completed]="answerStatus.getIsPuzzle1Complete"
+            (click)="showPuzzle1()">
+            1. Hartnell
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle2Permitted">
-        <button (click)="showPuzzle2()">2. Troughton</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle2Visible"
+            [class.completed]="answerStatus.getIsPuzzle2Complete"
+            (click)="showPuzzle2()">
+            2. Troughton
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle3Permitted">
-        <button (click)="showPuzzle3()">3. Pertwee</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle3Visible"
+            [class.completed]="answerStatus.getIsPuzzle3Complete"
+            (click)="showPuzzle3()">
+            3. Pertwee
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle4Permitted">
-        <button (click)="showPuzzle4()">4. Baker</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle4Visible"
+            [class.completed]="answerStatus.getIsPuzzle4Complete"
+            (click)="showPuzzle4()">
+            4. Baker
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle5Permitted">
-        <button (click)="showPuzzle5()">5. Davison</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle5Visible"
+            [class.completed]="answerStatus.getIsPuzzle5Complete"
+            (click)="showPuzzle5()">
+            5. Davison
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle6Permitted">
-        <button (click)="showPuzzle6()">6. Baker</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle6Visible"
+            [class.completed]="answerStatus.getIsPuzzle6Complete"
+            (click)="showPuzzle6()">
+            6. Baker
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle7Permitted">
-        <button (click)="showPuzzle7()">7. McCoy</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle7Visible"
+            [class.completed]="answerStatus.getIsPuzzle7Complete"
+            (click)="showPuzzle7()">
+            7. McCoy
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle8Permitted">
-        <button (click)="showPuzzle8()">8. McGann</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle8Visible"
+            [class.completed]="answerStatus.getIsPuzzle8Complete"
+            (click)="showPuzzle8()">
+            8. McGann
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle9Permitted">
-        <button (click)="showPuzzle9()">9. Eccleston</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle9Visible"
+            [class.completed]="answerStatus.getIsPuzzle9Complete"
+            (click)="showPuzzle9()">
+            9. Eccleston
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle10Permitted">
-        <button (click)="showPuzzle10()">10. Tennant</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle10Visible"
+            [class.completed]="answerStatus.getIsPuzzle10Complete"
+            (click)="showPuzzle10()">
+            10. Tennant
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle11Permitted">
-        <button (click)="showPuzzle11()">11. Smith</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle11Visible"
+            [class.completed]="answerStatus.getIsPuzzle11Complete"
+            (click)="showPuzzle11()">
+            11. Smith
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle12Permitted">
-        <button (click)="showPuzzle12()">12. Capaldi</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle12Visible"
+            [class.completed]="answerStatus.getIsPuzzle12Complete"
+            (click)="showPuzzle12()">
+            12. Capaldi
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle13Permitted">
-        <button (click)="showPuzzle13()">13. Whittaker</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle13Visible"
+            [class.completed]="answerStatus.getIsPuzzle13Complete"
+            (click)="showPuzzle13()">
+            13. Whittaker
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsPuzzle14Permitted">
-        <button (click)="showPuzzle14()">14. Gatwa</button>
+        <button
+            [class.selected]="visibilityStatus.getIsPuzzle14Visible"
+            [class.completed]="answerStatus.getIsPuzzle14Complete"
+            (click)="showPuzzle14()">
+            14. Gatwa
+        </button>
     </li>
     <li *ngIf="permissionsStatus.getIsConclusionPermitted">
-        <button (click)="showConclusion()">Conclusion</button>
+        <button
+            [class.selected]="visibilityStatus.getIsConclusionVisible"
+            (click)="showConclusion()">Conclusion</button>
     </li>
     <li *ngIf="permissionsStatus.getIsSignInPermitted">
         <button (click)="showSignIn()">Sign in</button>
